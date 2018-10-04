@@ -3,18 +3,90 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.18.0",
+    "copy-to-clipboard": "^3.0.8",
+    "dotenv": "^6.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "node-sass": "^4.9.3",
     "react": "^16.5.2",
+    "react-cookie": "^3.0.4",
     "react-dom": "^16.5.2",
-    "react-scripts": "2.0.4"
+    "react-intl": "^2.7.0",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.0.4",
+    "react-transition-group": "^2.5.0",
+    "uuid": "^3.3.2",
+    "validator": "^10.8.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "extract-messages": "NODE_ENV=production babel ./src  --out-file /dev/null && rip json2pot 'build/messages/src/**/*.json' -o ./translation/en-ca.pot",
+    "compile-translations": "rip po2json './translation/*.po' -m './build/messages/src/**/*.json' -o './src/assets/locales'"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "env": {
+      "browser": true,
+      "es6": true,
+      "node": true
+    },
+    "globals": {
+      "document": false,
+      "escape": false,
+      "navigator": false,
+      "unescape": false,
+      "window": false,
+      "describe": true,
+      "before": true,
+      "beforeEach": true,
+      "after": true,
+      "afterEach": true,
+      "it": true,
+      "expect": true,
+      "sinon": true
+    },
+    "parser": "babel-eslint",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "experimentalDecorators": true,
+        "jsx": true
+      }
+    },
+    "plugins": [
+      "react",
+      "import"
+    ],
+    "rules": {
+      "camelcase": "off",
+      "no-const-assign": "warn",
+      "no-undef": "warn",
+      "no-unreachable": "warn",
+      "no-trailing-spaces": "warn",
+      "eol-last": "warn",
+      "quotes": "warn",
+      "valid-typeof": "warn",
+      "no-unused-vars": [
+        2,
+        {
+          "varsIgnorePattern": "React|BroadSignPlay"
+        }
+      ],
+      "react/jsx-uses-vars": "warn",
+      "comma-dangle": [
+        "error",
+        "only-multiline"
+      ]
+    },
+    "extends": [
+      "standard",
+      "react-app"
+    ]
   },
   "browserslist": [
     ">0.2%",
