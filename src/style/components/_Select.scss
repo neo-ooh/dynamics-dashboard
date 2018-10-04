@@ -1,0 +1,64 @@
+.select-field {
+  display: inline-block;
+  margin-top: 20px;
+  position: relative;
+
+  .select-field-label {
+    margin-left: 5px;
+    @include field-label;
+  }
+
+  .select-field-input {
+    display: block;
+    width: 250px;
+    height: 25px;
+    margin: 2px 0 0 0;
+    padding: 6px;
+
+    @include field-text;
+
+    outline: none;
+    border: none;
+    border-radius: 3px;
+
+    background-color: $white;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  .select-field-caret
+  {
+    position: absolute;
+    right: 25px;
+    bottom: 16px;
+
+    &:before
+    {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-top: 9px solid $grey-dark;
+      border-left: 9px solid transparent;
+      border-right: 9px solid transparent;
+    }
+
+    &:after
+    {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 0;
+      border-top: 7px solid $white;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+    }
+  }
+
+  &+& {
+    margin-left: 20px;
+  }
+}

@@ -1,0 +1,83 @@
+@font-face
+{
+  font-family: 'Gotham';
+  font-weight: 700;
+  src: url('../assets/fonts/Gotham-Bold.otf');
+}
+
+@font-face
+{
+  font-family: Gotham;
+  font-weight: 500;
+  src: url('../assets/fonts/Gotham-Medium.otf');
+}
+
+@font-face
+{
+  font-family: Gotham;
+  font-weight: normal;
+  src: url('../assets/fonts/Gotham-Book.otf');
+}
+
+@mixin big-title
+{
+  font-family: Gotham;
+  font-size: 48px;
+  font-weight: 500;
+  color: $black;
+}
+
+@mixin card-big-caption-grey
+{
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $grey-medium;
+}
+
+@mixin card-big-caption-color
+{
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: $highlight-light;
+}
+
+@mixin sidebar-section
+{
+  font-family: Gotham;
+  font-size: 20px;
+  font-weight: 500;
+  color: $grey-medium;
+}
+
+@mixin sidebar-link-grey
+{
+  font-family: Gotham;
+  font-size: 18px;
+  font-weight: 500;
+  color: $grey-light;
+}
+
+@mixin sidebar-link-color
+{
+  font-family: Gotham;
+  font-size: 18px;
+  font-weight: 500;
+  color: $highlight-light;
+}
+
+@mixin field-label
+{
+  font-family: Gotham;
+  font-size: 11px;
+  color: $black;
+}
+
+@mixin field-text {
+  font-family: Gotham;
+  font-size: 13px;
+  color: $black;
+}

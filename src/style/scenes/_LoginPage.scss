@@ -1,0 +1,12 @@
+.login-page {
+  display: block;
+  width: 250px;
+  margin: 250px auto;
+
+  h3 {
+    width: 350px;
+    text-align: center;
+    margin-left: -50px;
+    @include big-title;
+  }
+}

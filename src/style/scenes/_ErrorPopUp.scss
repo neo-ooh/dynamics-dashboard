@@ -1,0 +1,45 @@
+#error-popup {
+  display:block;
+  position: fixed;
+  right: 35px;
+  bottom: 35px;
+  width: 250px;
+  padding: 15px;
+
+  border-radius: 3px;
+
+  background-color: $error-red;
+
+  color: #ffffff;
+
+  transition: .15s ease;
+
+  .title
+  {
+    text-transform: uppercase;
+    font-size: 10pt;
+    font-weight: 700;
+  }
+
+  .message {
+    margin-top: 10px;
+    font-size: 11pt;
+    white-space: pre-line;
+  }
+
+  &.error-popup-enter {
+    bottom: -150px;
+
+    &.error-popup-enter-active {
+      bottom: 35px;
+    }
+  }
+
+  &.error-popup-exit {
+    opacity: 1;
+
+    &.error-popup-exit-active {
+      opacity: 0;
+    }
+  }
+}

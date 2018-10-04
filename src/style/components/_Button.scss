@@ -1,0 +1,49 @@
+.button {
+  display:block;
+  width: 125px;
+  height: 28px;
+  margin: 30px auto 0;
+  padding: 9px 7px 7px;
+
+  @include field-text;
+  text-align: center;
+
+  background-color: $white;
+
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+  outline: none;
+  -webkit-appearance: none;
+
+  // transition-duration: .15s;
+
+  &:hover {
+    background-color: $grey-ultralight;
+  }
+
+  &:active {
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1) inset;
+  }
+
+  &.loading {
+    animation: pulse-white 1.5s ease infinite;
+  }
+
+  &.primary {
+    background-color: $highlight-dark;
+    color: #fff;
+
+    &:hover {
+      background-color: lighten($highlight-dark, 15%);
+    }
+
+    &.loading {
+      animation: pulse-highlight-dark 1.5s ease infinite;
+    }
+  }
+}
+
+@include animation-pulse-darken($white, 'pulse-white');
+@include animation-pulse-lighten($highlight-dark, 'pulse-highlight-dark');

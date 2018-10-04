@@ -1,0 +1,28 @@
+.text-field {
+  label {
+    display: block;
+    margin: 5px;
+
+    @include field-label
+  }
+
+  input {
+    width: 250px;
+    height: 28px;
+    padding: 9px 7px 7px;
+
+    @include field-text;
+
+    border: none;
+    border-radius: 3px;
+    background-color: $white;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  &+.text-field {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,103 @@
+////////////////
+// MEDIA QUERIES
+
+@mixin standard-screen {
+  @media
+  (-webkit-max-device-pixel-ratio: $retina-pixel-ratio),
+  (max-resolution: $retina-dpi) {
+    @content
+  }
+}
+
+@mixin retina-screen {
+  @media
+  (-webkit-min-device-pixel-ratio: $retina-pixel-ratio),
+  (min-resolution: $retina-dpi) {
+    @content
+  }
+}
+
+@mixin super-retina-screen {
+  @media
+  (-webkit-min-device-pixel-ratio: $super-retina-pixel-ratio),
+  (min-resolution: $super-retina-dpi) {
+    @content
+  }
+}
+
+//////////////
+// BACKGROUNDS
+
+@mixin background-cover($path, $extension: 'png')
+{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @include standard-screen {
+    background-image: url($path + '.' + $extension);
+  }
+
+  @include retina-screen {
+    background-image: url($path + '@2x.' + $extension);
+  }
+
+  @include super-retina-screen {
+    background-image: url($path + '@3x.' + $extension);
+  }
+}
+
+
+@mixin card-icon($path, $extension: 'png')
+{
+  .card-icon {
+    @include background-cover($path + '-idle', $extension)
+  }
+
+  &.darker-icon .card-icon {
+    @include background-cover($path + '-active', $extension)
+  }
+
+  &:hover .card-icon {
+    @include background-cover($path + '-color', $extension)
+  }
+
+  &:active .card-icon {
+    @include background-cover($path + '-idle', $extension)
+  }
+}
+
+
+// ANIMATIONS
+@mixin animation-pulse($background, $name, $method) {
+  @-webkit-keyframes #{$name}
+  {
+    0%
+    {
+      background: $background;
+    }
+
+    45%
+    {
+      background: call(get-function($method), $background, 20%);
+    }
+
+    55%
+    {
+      background: call(get-function($method), $background, 20%);
+    }
+
+    100%
+    {
+      background: $background;
+    }
+  }
+}
+
+@mixin animation-pulse-lighten($background, $name) {
+  @include animation-pulse($background, $name, lighten)
+}
+
+@mixin animation-pulse-darken($background, $name) {
+  @include animation-pulse($background, $name, darken)
+}

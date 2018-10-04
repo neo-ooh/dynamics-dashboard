@@ -1,0 +1,26 @@
+.selectable-card-list {
+  display: block;
+  margin-top: 20px;
+
+  .selectable-card-list-label {
+    width: 100%;
+    margin: 0 0 0 5px;
+
+    @include field-label
+  }
+
+  .selectable-card-list-items {
+    display: flex;
+    margin: -4px 0 0 -10px;
+
+    .selectable-card-radio-ensemble
+    {
+      margin: 10px 0 0 10px;
+
+      .selectable-card-radio-input
+      {
+        display: none;
+      }
+    }
+  }
+}

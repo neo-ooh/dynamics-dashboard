@@ -1,0 +1,93 @@
+.app-switcher-icon {
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 24px;
+
+  width: 24px;
+  height: 24px;
+
+  cursor: pointer;
+
+  @include background-cover('../assets/images/icons-app-switcher-idle');
+
+  &:hover {
+    @include background-cover('../assets/images/icons-app-switcher-active');
+  }
+
+  &:active,
+  &.active {
+    @include  background-cover('../assets/images/icons-app-switcher-color');
+  }
+}
+
+.app-switcher-window {
+  display: block;
+  position: absolute;
+  z-index: 110;
+  top: $header-height + 12px;
+  left: 12px;
+  width: 470px;
+  padding: 20px;
+
+  background-color: $white;
+  border-radius: 5px;
+  box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.1);
+
+  &.hidden {
+    display: none;
+  }
+
+  .app-switcher-up-arrow {
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 8px;
+    width: 26px;
+    height: 11px;
+
+    @include background-cover('../assets/images/icons-app-switcher-up-arrow')
+  }
+
+  .app-switcher-title {
+    display: block;
+
+    color: $grey-dark;
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  hr {
+    border: .5px solid $grey-light;
+  }
+
+  .app-switcher-window-item {
+    display: block;
+    width: 100%;
+    height: 100px;
+
+    overflow: auto;
+
+    .app-switcher-window-item-icon {
+      width: 260px;
+      height: 50px;
+      margin: 25px 0 0 80px;
+
+      &.ad-direct {
+        @include background-cover('../assets/images/logos-ad-direct-dark');
+
+        &:hover {
+          @include background-cover('../assets/images/logos-ad-direct-default')
+        }
+      }
+
+      &.dynamics {
+        @include background-cover('../assets/images/logos-dynamics-dark');
+
+        &:hover {
+          @include background-cover('../assets/images/logos-dynamics-default')
+        }
+      }
+    }
+  }
+}

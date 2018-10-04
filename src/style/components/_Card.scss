@@ -1,0 +1,122 @@
+.card {
+  display: inline-block;
+
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+  text-align: center;
+
+  transition: .15s ease;
+
+  .card-label {
+    text-transform: capitalize;
+    text-decoration: none;
+
+    transition: .15s ease;
+  }
+
+  //  BIG ICON CARD
+  &.card-big-icon {
+    width: 260px;
+    height: 210px;
+    margin: 25px 0 0 25px;
+
+    .card-icon {
+      width: 110px;
+      height: 76px;
+
+      margin: 32px 75px 0;
+    }
+
+    .card-label {
+      margin: 50px 0 0;
+      @include card-big-caption-grey;
+    }
+  }
+
+  // WIDE LIST CARD
+  &.card-wide-list {
+    display: flex;
+    width: 624px;
+    height: 48px;
+    margin: 20px 0 0 0;
+
+    .card-icon {
+      display: inline-block;
+      width: 36px;
+      height: 25px;
+      margin: 12px 20px 0 17px;
+    }
+
+    .card-label {
+      display: inline-block;
+      width: 524px;
+      padding: 13px 0;
+
+      @include sidebar-section;
+
+      text-align: left;
+      text-transform: none;
+    }
+  }
+
+  &.card-radio-list {
+    min-width: 87px;
+    height: 50px;
+    padding: 10px;
+
+    border-radius: 3px;
+
+    .card-label {
+      padding:8px 0;
+      @include field-text;
+    }
+  }
+
+  &.card-jumbo-size {
+    width: 100%;
+    padding: 25px;
+
+    .card-label {
+      font-size: 12pt;
+      color: $grey-dark;
+      text-transform: none;
+    }
+  }
+
+  &:hover .card-label {
+    color: $highlight-light;
+  }
+
+  input[type=radio]:checked + label>&,
+  &:active {
+    background-color: $highlight-light;
+    box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1) inset;
+
+    .card-label {
+      color: $white;
+    }
+  }
+
+  // ICONS
+  &.key {
+    @include card-icon('../assets/images/icons-key', 'png')
+  }
+
+  &.weather {
+    @include card-icon('../assets/images/icons-weather', 'png')
+  }
+
+  &.news {
+    @include card-icon('../assets/images/icons-newspaper', 'png')
+  }
+
+  &.link {
+    @include card-icon('../assets/images/icons-link', 'png')
+  }
+}
+
+.big-card-ensemble {
+  margin-left: -25px;
+}
