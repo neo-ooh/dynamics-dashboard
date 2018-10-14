@@ -70,7 +70,10 @@ class BackgroundsList extends Component {
     return (
       <div className="background-list-container">
         { weatherList.map((weather, index) => {
-          let bckgIndex = this.state.backgrounds.findIndex(background => background.weather === weather)
+          let bckgIndex = this.state.backgrounds.findIndex(background => {
+            if(background === undefined) return false
+            return background.weather === weather
+          })
           const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]
           bckgIndex = bckgIndex === -1 ? index : bckgIndex
 
