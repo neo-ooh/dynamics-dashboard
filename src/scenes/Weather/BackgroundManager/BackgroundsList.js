@@ -70,8 +70,9 @@ class BackgroundsList extends Component {
     return (
       <div className="background-list-container">
         { weatherList.map((weather, index) => {
-          const bckgIndex = this.state.backgrounds.findIndex(background => background.weather === weather)
-          const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]
+          let bckgIndex = this.state.backgrounds.findIndex(background => background.weather === weather)
+          const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]gcam ""
+          bckgIndex = bckgIndex === -1 ? index : bckgIndex
 
           return <BackgroundCard
             label={this.props.intl.formatMessage(BackgroundsList.messages[weather])}
@@ -93,6 +94,28 @@ class BackgroundsList extends Component {
 
   renderByCollection () {
     return null
+    /* return (
+      <div className="background-list-container">
+        { weatherList.map((weather, index) => {
+          const bckgIndex = this.state.backgrounds.findIndex(background => background.weather === weather)
+          const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]
+
+          return <BackgroundCard
+            label={this.props.intl.formatMessage(BackgroundsList.messages[weather])}
+            key={index + background}
+            background={background}
+            country={this.props.country}
+            province={this.props.province}
+            city={this.props.city}
+            period={this.props.period}
+            support={this.props.support}
+            weather={weather}
+            onUpdate={this.onCardUpdate.bind(this, bckgIndex)}
+            onDelete={this.getBackgrounds}
+          />
+        })}
+      </div>
+    ) */
   }
 }
 

@@ -15,6 +15,7 @@ class EmptyBackgroundCard extends Component {
     const parentBackground = this.props.background !== null ? this.props.background.path : ''
     return (
       <DropZone
+        disableClick
         className="weather-background-card-placeholder"
         activeClassName="on-drag"
         accept={['image/jpeg']}

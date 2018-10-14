@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0ce948c2-fa9e-4c50-9237-a2bef7b27ff6" name="Default Changelist" comment="" />
+    <list default="true" id="0ce948c2-fa9e-4c50-9237-a2bef7b27ff6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,23 +27,23 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="env" value="5" />
+          <entry key="env" value="6" />
           <entry key="gitignore" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="js" value="148" />
+          <entry key="js" value="151" />
           <entry key="json" value="17" />
           <entry key="md" value="1" />
-          <entry key="scss" value="39" />
+          <entry key="scss" value="40" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key=".env file" value="5" />
+          <entry key=".env file" value="6" />
           <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="148" />
+          <entry key="JavaScript" value="151" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="39" />
+          <entry key="SCSS" value="40" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
@@ -46,18 +51,18 @@
         <counts>
           <entry key="env" value="29" />
           <entry key="gitignore" value="56" />
-          <entry key="js" value="11238" />
+          <entry key="js" value="11355" />
           <entry key="json" value="209" />
-          <entry key="scss" value="2200" />
+          <entry key="scss" value="2217" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="29" />
           <entry key="JSON" value="209" />
-          <entry key="JavaScript" value="11238" />
+          <entry key="JavaScript" value="11355" />
           <entry key="PLAIN_TEXT" value="56" />
-          <entry key="SCSS" value="2200" />
+          <entry key="SCSS" value="2217" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -72,10 +77,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/.htaccess">
+            <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+                <state relative-caret-position="404">
+                  <caret line="73" column="88" selection-start-line="73" selection-start-column="88" selection-end-line="73" selection-end-column="88" />
                 </state>
               </provider>
             </entry>
@@ -85,10 +90,10 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
+            <entry file="file://$PROJECT_DIR$/.env">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="415">
-                  <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+                <state relative-caret-position="57">
+                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
                 </state>
               </provider>
             </entry>
@@ -140,18 +145,18 @@
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/Cards/ImageCard.js" />
         <option value="$PROJECT_DIR$/src/components/Card.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" />
         <option value="$PROJECT_DIR$/src/style/components/_Card.scss" />
         <option value="$PROJECT_DIR$/src/components/Select.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" />
-        <option value="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" />
         <option value="$PROJECT_DIR$/src/library/api.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
+        <option value="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" />
       </list>
     </option>
   </component>
@@ -195,6 +200,32 @@
               <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
               <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="style" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Weather" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -306,18 +337,18 @@
       <workItem from="1538799688810" duration="683000" />
       <workItem from="1539117556095" duration="13849000" />
       <workItem from="1539469286483" duration="7706000" />
-      <workItem from="1539484171332" duration="6416000" />
+      <workItem from="1539484171332" duration="8333000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34157000" />
+    <option name="totallyTimeSpent" value="36074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6979638" visible="true" weight="0.15814696" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6979638" visible="true" weight="0.15814696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.3020362" side_tool="true" visible="true" weight="0.15814696" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -332,7 +363,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5026624" side_tool="true" visible="true" weight="0.21769911" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.5026624" side_tool="true" visible="true" weight="0.21769911" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -544,13 +575,6 @@
     <entry file="file://$PROJECT_DIR$/messages/src/scenes/Weather/BackgroundManager.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/components/_Card.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-271">
@@ -569,20 +593,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="87" column="6" selection-start-line="87" selection-start-column="6" selection-end-line="87" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="3" lean-forward="true" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -621,10 +631,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="78" column="24" selection-start-line="78" selection-start-column="24" selection-end-line="78" selection-end-column="24" />
+        <state relative-caret-position="76">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="93" column="42" lean-forward="true" selection-start-line="93" selection-start-column="42" selection-end-line="93" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -635,10 +666,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
+        <state relative-caret-position="404">
+          <caret line="73" column="88" selection-start-line="73" selection-start-column="88" selection-end-line="73" selection-end-column="88" />
         </state>
       </provider>
     </entry>

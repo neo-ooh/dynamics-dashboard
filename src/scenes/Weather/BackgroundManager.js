@@ -66,8 +66,6 @@ class BackgroundManager extends Component {
     if(city !== '+') return this.setState({
       city: city
     })
-
-
   }
 
   onPeriodChange = period => {
