@@ -21,13 +21,12 @@ class Select extends Component {
           id={ fieldID }
           className="select-field-input"
           onChange={ this.onChange }
-          style={{ width: this.props.width + 'px' }}>
-          { this.props.options.map(({ value, label }, index) => {
+          style={{ width: this.props.width + 'px' }}
+          value={this.props.value}>
+          { this.props.options.map(({ value, label }) => {
             return (<option
               value={ value }
-              key={ label + value }
-              defaultChecked={ index === 0 }
-            >
+              key={ label + value } >
               { label }
             </option>)
           })

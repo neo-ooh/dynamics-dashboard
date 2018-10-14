@@ -30,11 +30,11 @@ class BackgroundCard extends Component {
     formData.append('background', background)
 
     api.post('/dynamics/weather/backgrounds', formData).then(response => {
-      if(response === null) {
-        this.setState({
-          uploading: false,
-        })
-      }
+      this.setState({
+        uploading: false,
+      })
+
+      if(response === null) return
 
       this.props.onUpdate(response.background)
     })

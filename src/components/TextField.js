@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import uuid from 'uuid/v4'
 
 class TextField extends Component {
+  componentDidMount() {
+    this.props.focus && this.input.focus()
+  }
   render () {
     const fieldID = 'text-field-' + uuid()
     return (
@@ -15,7 +18,8 @@ class TextField extends Component {
           className="text-field"
           value={ this.props.value }
           placeholder={ this.props.placeholder || this.props.label }
-          onChange={ this.props.onChange }/>
+          onChange={ this.props.onChange }
+          ref={(input) => { this.input = input; }} />
       </div>
     )
   }

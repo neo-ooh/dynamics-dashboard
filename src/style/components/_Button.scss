@@ -1,5 +1,5 @@
 .button {
-  display:block;
+  display: block;
   width: 125px;
   height: 28px;
   margin: 30px auto 0;
@@ -41,6 +41,27 @@
 
     &.loading {
       animation: pulse-highlight-dark 1.5s ease infinite;
+    }
+  }
+}
+
+.button-row {
+  display: block;
+  margin-top: 20px;
+
+  &.right {
+    text-align: right;
+  }
+
+  .button {
+    display: inline-block;
+    width: auto;
+    height: 25px;
+    padding: 6px 9px;
+    margin: 0;
+
+    &:not(:first-child) {
+      margin-left: 10px;
     }
   }
 }

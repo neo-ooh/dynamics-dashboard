@@ -8,6 +8,7 @@ import Vhr from 'components/Vhr'
 import api from 'library/api'
 import ToggleSwitch from 'components/ToggleSwitch'
 import BackgroundsList from './BackgroundManager/BackgroundsList'
+import AddCityWindow from './BackgroundManager/AddCityWindow'
 
 class BackgroundManager extends Component {
   constructor (props) {
@@ -22,6 +23,8 @@ class BackgroundManager extends Component {
       selection: '-',
       provinces: [],
       cities: [],
+      addCity: false,
+      lastCity: '-'
     }
   }
 
@@ -48,6 +51,7 @@ class BackgroundManager extends Component {
   supports = [
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' },
+    { value: 'LED', label: 'LED' },
   ]
 
   selectionMethods = [
@@ -65,6 +69,32 @@ class BackgroundManager extends Component {
   onCityChange = city => {
     if(city !== '+') return this.setState({
       city: city
+    })
+
+    this.setState({
+      addCity: true,
+      lastCity: this.state.city,
+    })
+  }
+
+  onCityAddClose = () => {
+    this.setState({
+      addCity: false,
+      city: this.state.lastCity,
+    })
+  }
+
+  onCityAdd = cityName => {
+    console.log(cityName)
+    const cities = this.state.cities
+    cities.push({
+      city: cityName,
+      province: this.state.province,
+    })
+    this.setState({
+      addCity: false,
+      cities: cities,
+      city: cityName,
     })
   }
 
@@ -123,8 +153,8 @@ class BackgroundManager extends Component {
       cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(BackgroundManager.messages.addCity) })
     }
 
-    return (
-      <section className="content-column">
+    return [
+      <section className="content-column" key="background-manager">
         <Link to="/dynamic/weather/"
           className="nav-back-upper-title">
           <span className="nav-back-arrow">&lt;</span>
@@ -136,13 +166,15 @@ class BackgroundManager extends Component {
             label={ this.props.intl.formatMessage(BackgroundManager.messages.province) }
             options={ this.provinces }
             onChange={ this.onProvinceChange }
-            width={225} />
+            width={225}
+            value={this.state.province} />
           { this.state.province !== '--' && (
             <Select
               label={ this.props.intl.formatMessage(BackgroundManager.messages.city) }
               options={ cities }
               onChange={ this.onCityChange }
-              width={175} />
+              width={175}
+              value={this.state.city} />
           ) }
           <Vhr />
           <ToggleSwitch
@@ -171,8 +203,13 @@ class BackgroundManager extends Component {
           selection={this.state.selection}
           onSelectionMethodUpdate={this.onSelectionMethodUpdate}
         />
-      </section>
-    )
+      </section>,
+      this.state.addCity && <AddCityWindow
+        onClose={this.onCityAddClose}
+        onAdd={this.onCityAdd}
+        key="add-city-window"
+      />
+    ]
   }
 }
 
