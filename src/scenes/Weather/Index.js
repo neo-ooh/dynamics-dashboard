@@ -5,10 +5,6 @@ import { defineMessages, injectIntl } from 'react-intl'
 import WideListCard from 'components/Cards/WideListCard'
 
 class Index extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   messages = defineMessages({
     generateURL: {
       id: 'dynamics.weather.generate-url',

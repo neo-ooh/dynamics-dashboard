@@ -7,10 +7,6 @@ import { injectIntl } from 'react-intl'
 import { Switch, Route } from 'react-router-dom'
 
 class Weather extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <Switch>

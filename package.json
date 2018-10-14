@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.1.0",
+    "@babel/cli": "^7",
+    "@babel/core": "^7.1.2",
     "@svgr/webpack": "2.4.1",
     "axios": "^0.18.0",
-    "babel-core": "7.0.0-bridge.0",
+    "babel-core": "^7.0.0-beta.41",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-named-asset-import": "^0.2.2",
+    "babel-plugin-react-intl": "^3.0.1",
     "babel-preset-react-app": "^5.0.3",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -50,6 +52,7 @@
     "react-cookie": "^3.0.4",
     "react-dev-utils": "^6.0.4",
     "react-dom": "^16.5.2",
+    "react-dropzone": "^6.2.1",
     "react-intl": "^2.7.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
@@ -70,8 +73,8 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "extract-messages": "NODE_ENV=production babel ./src  --out-file /dev/null && rip json2pot 'build/messages/src/**/*.json' -o ./translation/en-ca.pot",
-    "compile-translations": "rip po2json './translation/*.po' -m './build/messages/src/**/*.json' -o './src/assets/locales'"
+    "extract-messages": "NODE_ENV=production babel ./src  --out-file /dev/null && rip json2pot './messages/src/**/*.json' -o ./translation/en-ca.pot",
+    "compile-translations": "rip po2json './translation/*.po' -m './messages/src/**/*.json' -o './src/assets/locales'"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -79,6 +82,14 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "react-intl",
+        {
+          "messagesDir": "./messages/"
+        }
+      ]
     ]
   },
   "browserslist": [

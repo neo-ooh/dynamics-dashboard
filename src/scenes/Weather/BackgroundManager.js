@@ -3,18 +3,23 @@ import React, { Component } from 'react'
 import { defineMessages, injectIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 import Select from 'components/Select'
+import Vhr from 'components/Vhr'
 
 import api from 'library/api'
+import ToggleSwitch from 'components/ToggleSwitch'
+import BackgroundsList from './BackgroundManager/BackgroundsList'
 
 class BackgroundManager extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      province: '-',
-      city: '',
-      period: '',
-      support: '',
+      country: 'CA',
+      province: '--',
+      city: '-',
+      period: 'MORNING',
+      support: 'DCA',
+      selection: '-',
       provinces: [],
       cities: [],
     }
@@ -45,16 +50,24 @@ class BackgroundManager extends Component {
     { value: 'FCL', label: 'FCL' },
   ]
 
+  selectionMethods = [
+    { value: 'WEATHER', label: this.props.intl.formatMessage(BackgroundManager.messages.selectionMethodWeather) },
+    { value: 'RANDOM', label: this.props.intl.formatMessage(BackgroundManager.messages.selectionMethodRandom) },
+  ]
+
   onProvinceChange = province => {
     this.setState({
-      province: province
+      province: province,
+      city: '-',
     })
   }
 
   onCityChange = city => {
-    this.setState({
+    if(city !== '+') return this.setState({
       city: city
     })
+
+
   }
 
   onPeriodChange = period => {
@@ -69,12 +82,29 @@ class BackgroundManager extends Component {
     })
   }
 
+  onSelectionMethodChange = newMethod => {
+    api.post('/dynamics/weather/backgrounds/selection', {
+      country: this.state.country,
+      province: this.state.province,
+      city: this.state.city,
+      selection: newMethod,
+    }).then((response) => this.setState({
+      selection: newMethod
+    }))
+  }
+
+  onSelectionMethodUpdate = newMethod => {
+    this.setState({
+      selection: newMethod
+    })
+  }
+
   sortAlphabetically = (a, b) => a.label < b.label ? -1 : 1
 
   componentDidMount () {
     // Sort provinces
     this.provinces.sort(this.sortAlphabetically)
-    this.provinces.unshift({ value: '-', label: this.props.intl.formatMessage(BackgroundManager.messages.allProvinces) })
+    this.provinces.unshift({ value: '--', label: this.props.intl.formatMessage(BackgroundManager.messages.allProvinces) })
 
     // Retrieve cities
     api.get('/dynamics/weather/backgrounds/cities').then(resp => {
@@ -85,13 +115,14 @@ class BackgroundManager extends Component {
 
   render () {
     let cities = []
-    if (this.state.province !== '-') {
+    if (this.state.province !== '--') {
       cities = this.state.cities
         .filter(city => city.province === this.state.province)
         .filter(city => city.city !== '-')
         .map(city => ({ value: city.city, label: city.city }))
       cities.sort(this.sortAlphabetically)
       cities.unshift({ value: '-', label: this.props.intl.formatMessage(BackgroundManager.messages.allCities) })
+      cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(BackgroundManager.messages.addCity) })
     }
 
     return (
@@ -102,27 +133,46 @@ class BackgroundManager extends Component {
           Weather Dynamic
         </Link>
         <h1>{ this.props.intl.formatMessage(BackgroundManager.messages.editBackgrounds) }</h1>
-        <Select
-          label={ this.props.intl.formatMessage(BackgroundManager.messages.province) }
-          options={ this.provinces }
-          onChange={ this.onProvinceChange }/>
-        { this.state.province !== '-' && (
+        <div className="filters">
           <Select
-            label={ this.props.intl.formatMessage(BackgroundManager.messages.city) }
-            options={ cities }
-            onChange={ this.onCityChange }
+            label={ this.props.intl.formatMessage(BackgroundManager.messages.province) }
+            options={ this.provinces }
+            onChange={ this.onProvinceChange }
+            width={225} />
+          { this.state.province !== '--' && (
+            <Select
+              label={ this.props.intl.formatMessage(BackgroundManager.messages.city) }
+              options={ cities }
+              onChange={ this.onCityChange }
+              width={175} />
+          ) }
+          <Vhr />
+          <ToggleSwitch
+            label={ this.props.intl.formatMessage(BackgroundManager.messages.selectionMethod) }
+            items={ this.selectionMethods }
+            onChange={ this.onSelectionMethodChange }
+            selected={ this.state.selection }
           />
-        ) }
-        <Select
-          label={ this.props.intl.formatMessage(BackgroundManager.messages.period) }
-          options={ this.periods }
-          onChange={ this.onPeriodChange }
-          width={ 125 }/>
-        <Select
-          label={ this.props.intl.formatMessage(BackgroundManager.messages.support) }
-          options={ this.supports }
-          onChange={ this.onSupportChange }
-          width={ 125 }/>
+          <Select
+            label={ this.props.intl.formatMessage(BackgroundManager.messages.period) }
+            options={ this.periods }
+            onChange={ this.onPeriodChange }
+            width={ 125 }/>
+          <Select
+            label={ this.props.intl.formatMessage(BackgroundManager.messages.support) }
+            options={ this.supports }
+            onChange={ this.onSupportChange }
+            width={ 125 }/>
+        </div>
+        <BackgroundsList
+          country={this.state.country}
+          province={this.state.province}
+          city={this.state.city}
+          period={this.state.period}
+          support={this.state.support}
+          selection={this.state.selection}
+          onSelectionMethodUpdate={this.onSelectionMethodUpdate}
+        />
       </section>
     )
   }
@@ -177,7 +227,7 @@ BackgroundManager.messages = defineMessages({
   selectionMethodWeather: {
     id: 'dynamics.weather.background-selection.weather',
     description: 'Selecting the background using the current weather',
-    defaultMessage: 'English',
+    defaultMessage: 'Weather',
   },
   selectionMethodRandom: {
     id: 'dynamics.weather.background-selection.random',
@@ -243,6 +293,11 @@ BackgroundManager.messages = defineMessages({
     id: 'dynamics.weather.cities.all',
     description: 'Province cities: All of them',
     defaultMessage: 'All',
+  },
+  addCity: {
+    id: 'dynamics.weather.cities.add',
+    description: 'Province cities: Add a new city to the list',
+    defaultMessage: 'Add',
   },
   support: {
     id: 'dynamics.weather.support',

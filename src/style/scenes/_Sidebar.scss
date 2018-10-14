@@ -2,7 +2,7 @@
   display: block;
   position: fixed;
   height: calc(100% - #{$header-height});
-  width: 200px;
+  width: $sidebar-width;
   top: $header-height;
   left: 0;
 

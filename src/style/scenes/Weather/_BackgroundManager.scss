@@ -1,0 +1,114 @@
+.weather-list-container {
+    margin: 15px 0 0;
+}
+.weather-background-card-holder {
+    display: inline-block;
+    margin: 20px 20px 0 0;
+    vertical-align: top;
+
+    &.FCL,
+    &.LED {
+        width: 265px;
+        height: 90px;
+    }
+
+    &.DCA {
+        width: 180px;
+        height: 265px;
+    }
+
+    .weather-background-card-label {
+        @include field-label;
+        margin-left: 5px;
+    }
+
+    .weather-background-card-placeholder {
+        width: 100%;
+        height: calc(100% - 15px);
+        margin-top: 4px;
+        position: relative;
+
+        border-radius: 6px;
+        border: dashed 3px $grey-light;
+
+        line-height: 75px;
+        text-align: center;
+
+        transition-duration: .15s;
+
+        .weather-background-card-placeholder-background {
+            position: absolute;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+            top: -3px;
+            left: -3px;
+            z-index: 1;
+
+            border-radius: 6px;
+
+            background: center no-repeat;
+            background-size: cover;
+
+            opacity: .4;
+        }
+
+        .weather-background-card-placeholder-label {
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            line-height: normal;
+            z-index: 50;
+
+            font-family: Gotham;
+            font-size: 14px;
+            font-weight: 500;
+            color: $grey-dark;
+        }
+
+        &.on-drag {
+            background-color: darken($grey-ultralight, 15%);
+
+            .weather-background-card-placeholder-label {
+                color: $grey-dark;
+            }
+        }
+    }
+
+    .weather-background-card-image {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 15px);
+        margin-top: 4px;
+
+        .weather-background-card-overlay {
+            display: table;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 90;
+            border-radius: 6px;
+
+            background-color: rgba($grey-dark, .8);
+
+            opacity: 0;
+            cursor: default;
+
+            transition-duration: .15s;
+
+            span {
+                display: table-cell;
+                vertical-align: middle;
+
+                @include field-text;
+                color: $white;
+                text-align: center;
+            }
+        }
+
+        &:hover .weather-background-card-overlay {
+            opacity: 1;
+        }
+    }
+}

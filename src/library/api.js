@@ -5,24 +5,37 @@ class Api {
   _errorCallback = () => {}
   _unauthorizedCallback = () => {}
 
-  get = url => {
+  get = (url, params) => {
+    const URLparams = params || {}
     return this._send({
       url: process.env.REACT_APP_API_URL + url,
       method: 'GET',
       headers: {
         'Authorization': this._userToken,
       },
+      params: URLparams
     })
   }
 
-  post = (url, params) => {
+  post = (url, data) => {
     return this._send({
       url: process.env.REACT_APP_API_URL + url,
       method: 'POST',
       headers: {
         'Authorization': this._userToken,
       },
-      data: params
+      data: data
+    })
+  }
+
+  delete = (url, params) => {
+    return this._send({
+      url: process.env.REACT_APP_API_URL + url,
+      method: 'DELETE',
+      headers: {
+        'Authorization': this._userToken,
+      },
+      params: params || {}
     })
   }
 
@@ -42,7 +55,7 @@ class Api {
   _onError = (error) => {
     const response = error.response || {}
 
-    if (response.status == '401') {
+    if (response.status === 401) {
       this._unauthorizedCallback()
       return null
     }
@@ -64,7 +77,7 @@ class Api {
       errorMessage = 'Fatal error'
     }
 
-    this._errorCallback(errorMessage)
+    this._errorCallback(errorMessage, response.status)
 
     return null
   }
@@ -75,7 +88,7 @@ class Api {
   }
 
   setUnauthorizedCallback = handler => {
-    this._unauthorizedCallback = (typeof handler === 'function') ? handler : () => {}
+    this._unauthorizedCallback = (typeof handler === 'function') ? handler : this._unauthorizedCallback
   }
 
   setUserToken = token => {

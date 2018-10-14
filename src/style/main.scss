@@ -12,6 +12,8 @@
 @import 'components/Select';
 @import 'components/SelectableCardList';
 @import 'components/TextField';
+@import 'components/ToggleSwitch';
+@import 'components/Vhr';
 
 // Scenes
 @import 'scenes/AppSwitcher';
@@ -21,4 +23,5 @@
 @import 'scenes/LoginPage';
 @import 'scenes/Sidebar';
 
+@import 'scenes/Weather/BackgroundManager';
 @import 'scenes/Weather/GenerateURL';

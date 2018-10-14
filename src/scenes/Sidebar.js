@@ -4,10 +4,6 @@ import { defineMessages, injectIntl } from 'react-intl'
 import { Link } from 'react-router-dom'
 
 class Sidebar extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   messages = defineMessages({
     dynamics: {
       id: 'dynamics.sidebar.dynamics',

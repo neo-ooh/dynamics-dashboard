@@ -1,7 +1,8 @@
 .select-field {
-  display: inline-block;
+  display: inline-flex;
   margin-top: 20px;
   position: relative;
+  flex-direction: column;
 
   .select-field-label {
     margin-left: 5px;
@@ -58,7 +59,7 @@
     }
   }
 
-  &+& {
+  &:not(:first-child) {
     margin-left: 20px;
   }
 }

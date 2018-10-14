@@ -1,0 +1,15 @@
+.vhr {
+    display: inline-flex;
+    position: relative;
+
+    margin: 0 0 0 20px;
+
+    .vhr-bar {
+        position: absolute;
+        top: -2px;
+        width: 1px;
+        height: 28px;
+
+        background-color: $grey-light;
+    }
+}

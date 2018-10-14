@@ -1,0 +1,48 @@
+.toggle-switch {
+    display: inline-flex;
+    flex-direction: column;
+
+    .toggle-switch-label {
+        margin-left: 5px;
+        @include field-label;
+    }
+
+    .toggle-switch-input {
+        display: flex;
+        width: 175px;
+        height: 25px;
+        margin: 2px 0 0 0;
+
+        background: #FFFFFF;
+
+        border-radius: 3px;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+        @include field-text;
+
+        .toggle-switch-item {
+            width: 50%;
+            padding: 6px;
+
+            text-align: center;
+            cursor: default;
+
+            &:first-child {
+                border-radius: 3px 0 0 3px;
+            }
+
+            &:last-child {
+                border-radius: 0 3px 3px 0;
+            }
+
+            &.selected {
+                background-color: $highlight-light;
+                color: $white;
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        margin-left: 20px;
+    }
+}

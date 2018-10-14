@@ -40,8 +40,12 @@ h1 {
 
 .content-column {
   display: block;
-  width: 830px;
+  min-width: 830px;
   margin: 100px auto 50px;
+
+  #sidebar + & {
+    margin: 100px 50px 50px calc(#{$sidebar-width} + 95px);
+  }
 }
 
 .nav-back-upper-title {

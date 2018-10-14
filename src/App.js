@@ -17,7 +17,7 @@ import { withCookies } from 'react-cookie'
 import { injectIntl } from 'react-intl'
 import Weather from 'scenes/Weather'
 
-require('./style/main.scss')
+import './style/main.scss'
 
 class App extends Component {
   constructor (props) {
@@ -45,6 +45,13 @@ class App extends Component {
   isUser = () => this.state.user !== null
 
   onLogin = userInfos => {
+    api.setUserToken(userInfos.token)
+
+    this.props.cookies.set('user', { name: userInfos.name, token: userInfos.token }, {
+      path: '/',
+      maxAge: 3600 * 4
+    })
+
     this.setState({
       user: {
         name: userInfos.name,
@@ -52,26 +59,20 @@ class App extends Component {
       },
       error: null
     })
-
-    this.props.cookies.set('user', { name: userInfos.name, token: userInfos.token }, {
-      path: '/',
-      maxAge: 3600 * 4
-    })
-
-    api.setUserToken(userInfos.token)
   }
 
   onLogOut = () => {
+    console.log('unauthorized')
     this.props.cookies.remove('user')
     api.setUserToken('')
     this.setState({
       user: null
     })
-    this.props.history.push('/')
   }
 
   onNetworkError = error => {
     // reset error message if needed, then set the new message
+    console.log(error)
     this.setState({ error: error })
   }
 
@@ -90,7 +91,6 @@ class App extends Component {
     if (!this.state.ready) return null
 
     if (!this.isUser()) {
-      if (window.location.pathname !== '/') this.props.history.push('/')
       return (
         <main>
           <Header />

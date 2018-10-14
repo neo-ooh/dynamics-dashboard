@@ -2,19 +2,19 @@ import React, { Component } from 'react'
 import uuid from 'uuid/v4'
 import Card from 'components/Card'
 
-import { injectIntl } from 'react-intl'
-
 class SelectableCardList extends Component {
   constructor (props) {
     super(props)
 
     this.state = {
-      id: uuid()
+      id: uuid(),
+      selected: this.props.default || this.props.items[0].value
     }
   }
 
   onChange = e => {
     this.props.onChange(e.target.value)
+    this.setState({ selected: e.target.value })
   }
 
   render () {
@@ -33,7 +33,7 @@ class SelectableCardList extends Component {
                   id={ itemID }
                   className="selectable-card-radio-input"
                   onChange={ this.onChange }
-                  defaultChecked={ index === 0 }/>
+                  defaultChecked={ value === this.state.selected }/>
                 <label
                   htmlFor={ itemID }
                   className="selectable-card-label">
@@ -50,4 +50,10 @@ class SelectableCardList extends Component {
   }
 }
 
-export default injectIntl(SelectableCardList)
+SelectableCardList.defaultProps = {
+  onChange: () => {},
+  items: []
+}
+
+
+export default SelectableCardList

@@ -22,9 +22,15 @@ class Select extends Component {
           className="select-field-input"
           onChange={ this.onChange }
           style={{ width: this.props.width + 'px' }}>
-          { this.props.options.map(({ value, label }) => (
-            <option value={value} key={label + value}>{label}</option>
-          ))
+          { this.props.options.map(({ value, label }, index) => {
+            return (<option
+              value={ value }
+              key={ label + value }
+              defaultChecked={ index === 0 }
+            >
+              { label }
+            </option>)
+          })
           }
         </select>
         <span className="select-field-caret" />

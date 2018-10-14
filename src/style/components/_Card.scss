@@ -85,6 +85,24 @@
     }
   }
 
+  &.card-image {
+    background: no-repeat center;
+    background-size: cover;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 6px;
+
+    .card-icon {
+      display: none;
+    }
+
+    .card-label {
+      display: none;
+    }
+  }
+
   &:hover .card-label {
     color: $highlight-light;
   }

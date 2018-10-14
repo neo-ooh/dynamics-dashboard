@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-
 import { injectIntl } from 'react-intl'
+
 import Card from '../Card'
 
 class BigIconCard extends Component {
