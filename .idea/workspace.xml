@@ -42,7 +42,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="env" value="26" />
+          <entry key="env" value="29" />
           <entry key="gitignore" value="56" />
           <entry key="js" value="11238" />
           <entry key="json" value="209" />
@@ -51,7 +51,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key=".env file" value="26" />
+          <entry key=".env file" value="29" />
           <entry key="JSON" value="209" />
           <entry key="JavaScript" value="11238" />
           <entry key="PLAIN_TEXT" value="56" />
@@ -72,8 +72,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/.env">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="57">
-                  <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+                <state>
+                  <caret column="3" selection-start-column="3" selection-end-column="3" />
                 </state>
               </provider>
             </entry>
@@ -111,7 +111,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" />
         <option value="$PROJECT_DIR$/src/style/_variables.scss" />
         <option value="$PROJECT_DIR$/src/style/scenes/_Sidebar.scss" />
@@ -149,6 +148,7 @@
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -368,18 +368,17 @@
       <workItem from="1538799688810" duration="683000" />
       <workItem from="1539117556095" duration="13849000" />
       <workItem from="1539469286483" duration="7706000" />
-      <workItem from="1539484171332" duration="4266000" />
+      <workItem from="1539484171332" duration="4415000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32007000" />
+    <option name="totallyTimeSpent" value="32156000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6979638" visible="true" weight="0.15814696" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6979638" visible="true" weight="0.15814696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.3020362" side_tool="true" visible="true" weight="0.15814696" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -394,7 +393,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5026624" side_tool="true" visible="true" weight="0.21769911" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.5026624" side_tool="true" visible="true" weight="0.21769911" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -692,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        <state>
+          <caret column="3" selection-start-column="3" selection-end-column="3" />
         </state>
       </provider>
     </entry>
