@@ -62,7 +62,6 @@ class App extends Component {
   }
 
   onLogOut = () => {
-    console.log('unauthorized')
     this.props.cookies.remove('user')
     api.setUserToken('')
     this.setState({

@@ -11,26 +11,26 @@ class BackgroundsList extends Component {
 
     this.state = {
       selection: '',
-      backgrounds: null
+      backgrounds: null,
     }
   }
 
-  componentDidUpdate(prevProps) {
-    if(JSON.stringify(this.props) === JSON.stringify(prevProps)) return
+  componentDidUpdate (prevProps) {
+    if (JSON.stringify(this.props) === JSON.stringify(prevProps)) return
 
     this.setState({
-      backgrounds: null
+      backgrounds: null,
     })
 
-    this.getBackgrounds();
+    this.getBackgrounds()
   }
 
-  componentDidMount() {
+  componentDidMount () {
     this.setState({
-      backgrounds: null
+      backgrounds: null,
     })
 
-    this.getBackgrounds();
+    this.getBackgrounds()
   }
 
   getBackgrounds = () => {
@@ -40,9 +40,9 @@ class BackgroundsList extends Component {
       province: this.props.province,
       city: this.props.city,
       period: this.props.period,
-      support: this.props.support
+      support: this.props.support,
     }).then(response => {
-      if(response === null) return
+      if (response === null) return
       this.props.onSelectionMethodUpdate(response.selection)
 
       this.setState({
@@ -56,7 +56,7 @@ class BackgroundsList extends Component {
     let backgrounds = this.state.backgrounds
     backgrounds[index] = newData
     this.setState({
-      backgrounds: backgrounds
+      backgrounds: backgrounds,
     })
   }
 
@@ -65,140 +65,140 @@ class BackgroundsList extends Component {
   }
 
   renderByWeather () {
-    if(this.state.backgrounds === null) return null
+    if (this.state.backgrounds === null) return null
 
     return (
       <div className="background-list-container">
         { weatherList.map((weather, index) => {
           let bckgIndex = this.state.backgrounds.findIndex(background => {
-            if(background === undefined) return false
+            if (background === undefined) return false
             return background.weather === weather
           })
           const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]
           bckgIndex = bckgIndex === -1 ? index : bckgIndex
 
           return <BackgroundCard
-            label={this.props.intl.formatMessage(BackgroundsList.messages[weather])}
-            key={index + background}
-            background={background}
-            country={this.props.country}
-            province={this.props.province}
-            city={this.props.city}
-            period={this.props.period}
-            support={this.props.support}
-            weather={weather}
-            onUpdate={this.onCardUpdate.bind(this, bckgIndex)}
-            onDelete={this.getBackgrounds}
+            label={ this.props.intl.formatMessage(BackgroundsList.messages[weather]) }
+            key={ index + background }
+            background={ background }
+            country={ this.props.country }
+            province={ this.props.province }
+            city={ this.props.city }
+            period={ this.props.period }
+            support={ this.props.support }
+            weather={ weather }
+            onUpdate={ this.onCardUpdate.bind(this, bckgIndex) }
+            onDelete={ this.getBackgrounds }
           />
-        })}
-      </div>
-    )
-  }
+        }) }
+          </div>
+          )
+        }
 
-  renderByCollection () {
-    const newBackgroundIndex = this.state.backgrounds ? this.state.backgrounds.length : 0
-    return (
-      <div className="background-list-container">
+        renderByCollection () {
+        const newBackgroundIndex = this.state.backgrounds ? this.state.backgrounds.length : 0
+        return (
+        <div className="background-list-container">
         { this.state.backgrounds &&
-          this.state.backgrounds.map((background, index) => {
+        this.state.backgrounds.map((background, index) => {
           return <BackgroundCard
             label=""
-            key={index + background}
-            background={background}
-            country={this.props.country}
-            province={this.props.province}
-            city={this.props.city}
-            period={this.props.period}
-            support={this.props.support}
-            weather={'-'}
-            onUpdate={this.onCardUpdate.bind(this, index)}
-            onDelete={this.getBackgrounds}
+            key={ index + background }
+            background={ background }
+            country={ this.props.country }
+            province={ this.props.province }
+            city={ this.props.city }
+            period={ this.props.period }
+            support={ this.props.support }
+            weather={ '-' }
+            onUpdate={ this.onCardUpdate.bind(this, index) }
+            onDelete={ this.getBackgrounds }
           />
-        })}
+        }) }
         <BackgroundCard
-          label=""
-          key="add-background"
-          background={null}
-          country={this.props.country}
-          province={this.props.province}
-          city={this.props.city}
-          period={this.props.period}
-          support={this.props.support}
-          weather={'-'}
-          onUpdate={this.onCardUpdate.bind(this, newBackgroundIndex)}
-          onDelete={this.getBackgrounds}
+        label=""
+        key="add-background"
+        background={ null }
+        country={ this.props.country }
+        province={ this.props.province }
+        city={ this.props.city }
+        period={ this.props.period }
+        support={ this.props.support }
+        weather={ '-' }
+        onUpdate={ this.onCardUpdate.bind(this, newBackgroundIndex) }
+        onDelete={ this.getBackgrounds }
         />
-      </div>
-    )
-  }
-}
+        </div>
+        )
+      }
+        }
 
-BackgroundsList.messages = defineMessages({
-  'cloudy': {
-    id: 'dynamics.weather.cloudy',
-    description: 'Cloudy weather',
-    defaultMessage: 'Cloudy',
-  },
-  'fog': {
-    id: 'dynamics.weather.fog',
-    description: 'Foggy weather',
-    defaultMessage: 'Fog',
-  },
-  'heavy-rain': {
-    id: 'dynamics.weather.heavy-rain',
-    description: 'Heavy rain weather',
-    defaultMessage: 'Heavy rain',
-  },
-  'mostly-cloudy': {
-    id: 'dynamics.weather.mostly-cloudy',
-    description: 'Mostly cloudy weather',
-    defaultMessage: 'Mostly Cloudy',
-  },
-  'mostly-sunny': {
-    id: 'dynamics.weather.mostly-sunny',
-    description: 'Mostly sunny weather',
-    defaultMessage: 'Mostly Sunny',
-  },
-  'partly-sunny': {
-    id: 'dynamics.weather.partly-sunny',
-    description: 'Partly sunny weather',
-    defaultMessage: 'Partly sunny',
-  },
-  'rain-and-sun': {
-    id: 'dynamics.weather.rain-and-sun',
-    description: 'Rain and sun weather',
-    defaultMessage: 'Rain and sun',
-  },
-  'rain': {
-    id: 'dynamics.weather.rain',
-    description: 'Rainny weather',
-    defaultMessage: 'Rain',
-  },
-  'snow-and-sun': {
-    id: 'dynamics.weather.snow-and-sun',
-    description: 'Snow and sun weather',
-    defaultMessage: 'Snow and sun',
-  },
-  'snow': {
-    id: 'dynamics.weather.snow',
-    description: 'Snow weather',
-    defaultMessage: 'Snow',
-  },
-  'storm-clouds': {
-    id: 'dynamics.weather.storm-clouds',
-    description: 'Storm clouds weather',
-    defaultMessage: 'Storm clouds',
-  },
-  'sunny': {
-    id: 'dynamics.weather.sunny',
-    description: 'Sunny weather',
-    defaultMessage: 'Sunny',
-  },
-  'thunderstorms': {
-    id: 'dynamics.weather.thunderstorms',
-    description: 'Thunderstorms weather',
-    defaultMessage: 'Thunderstorms',
-  },
-})
+        BackgroundsList.messages = defineMessages({
+        'cloudy': {
+        id: 'dynamics.weather.cloudy',
+        description: 'Cloudy weather',
+        defaultMessage: 'Cloudy',
+      },
+        'fog': {
+        id: 'dynamics.weather.fog',
+        description: 'Foggy weather',
+        defaultMessage: 'Fog',
+      },
+        'heavy-rain': {
+        id: 'dynamics.weather.heavy-rain',
+        description: 'Heavy rain weather',
+        defaultMessage: 'Heavy rain',
+      },
+        'mostly-cloudy': {
+        id: 'dynamics.weather.mostly-cloudy',
+        description: 'Mostly cloudy weather',
+        defaultMessage: 'Mostly Cloudy',
+      },
+        'mostly-sunny': {
+        id: 'dynamics.weather.mostly-sunny',
+        description: 'Mostly sunny weather',
+        defaultMessage: 'Mostly Sunny',
+      },
+        'partly-sunny': {
+        id: 'dynamics.weather.partly-sunny',
+        description: 'Partly sunny weather',
+        defaultMessage: 'Partly sunny',
+      },
+        'rain-and-sun': {
+        id: 'dynamics.weather.rain-and-sun',
+        description: 'Rain and sun weather',
+        defaultMessage: 'Rain and sun',
+      },
+        'rain': {
+        id: 'dynamics.weather.rain',
+        description: 'Rainny weather',
+        defaultMessage: 'Rain',
+      },
+        'snow-and-sun': {
+        id: 'dynamics.weather.snow-and-sun',
+        description: 'Snow and sun weather',
+        defaultMessage: 'Snow and sun',
+      },
+        'snow': {
+        id: 'dynamics.weather.snow',
+        description: 'Snow weather',
+        defaultMessage: 'Snow',
+      },
+        'storm-clouds': {
+        id: 'dynamics.weather.storm-clouds',
+        description: 'Storm clouds weather',
+        defaultMessage: 'Storm clouds',
+      },
+        'sunny': {
+        id: 'dynamics.weather.sunny',
+        description: 'Sunny weather',
+        defaultMessage: 'Sunny',
+      },
+        'thunderstorms': {
+        id: 'dynamics.weather.thunderstorms',
+        description: 'Thunderstorms weather',
+        defaultMessage: 'Thunderstorms',
+      },
+      })
 
-export default injectIntl(BackgroundsList)
+        export default injectIntl(BackgroundsList)

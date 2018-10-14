@@ -79,12 +79,15 @@ class LoginPage extends Component {
           <TextField
             label={ this.props.intl.formatMessage(this.messages.email) }
             placeholder="neo@traffic.com"
-            onChange={ this.onEmailChange } />
+            onChange={ this.onEmailChange }
+            focus
+            onEnter={ this.onLogin }/>
           <TextField
             type="password"
             label={ this.props.intl.formatMessage(this.messages.password) }
             placeholder="•••••"
-            onChange={ this.onPasswordChange } />
+            onChange={ this.onPasswordChange }
+            onEnter={ this.onLogin } />
           <Button
             value={ this.props.intl.formatMessage(this.messages.login)}
             onClick={ this.onLogin }
