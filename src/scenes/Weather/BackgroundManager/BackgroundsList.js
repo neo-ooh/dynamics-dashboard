@@ -75,7 +75,7 @@ class BackgroundsList extends Component {
             return background.weather === weather
           })
           const background = bckgIndex === -1 ? null : this.state.backgrounds[bckgIndex]
-          bckgIndex = bckgIndex === -1 ? index : bckgIndex
+          bckgIndex = bckgIndex === -1 ? this.state.backgrounds.length : bckgIndex
 
           return <BackgroundCard
             label={ this.props.intl.formatMessage(BackgroundsList.messages[weather]) }

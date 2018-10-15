@@ -15,7 +15,7 @@ class GenerateURL extends Component {
 
     this.state = {
       type: 'now',
-      language: 'en-CA',
+      language: '',
       apiKey: '',
       keys: []
     }
@@ -81,6 +81,11 @@ class GenerateURL extends Component {
       description: 'French broadcast',
       defaultMessage: 'French',
     },
+    default: {
+      id: 'dynamics.weather.language.default',
+      description: 'Default broadcast language',
+      defaultMessage: 'Default',
+    },
     APIKey: {
       id: 'dynamics.weather.APIKey',
       description: 'API Key used to authorize the dynamics when playing',
@@ -112,12 +117,13 @@ class GenerateURL extends Component {
   }
 
   languages = [
+    { value: '', label: this.props.intl.formatMessage(this.messages.default) },
     { value: 'en-CA', label: this.props.intl.formatMessage(this.messages.english) },
     { value: 'fr-CA', label: this.props.intl.formatMessage(this.messages.french) },
   ]
 
   generateURL = () => {
-    return 'https://weather.dynamics.ad-direct.ca/?content=' + this.state.type + '&lang=' + this.state.language + '&key=' + this.state.apiKey
+    return 'https://weather.dynamics.ad-direct.ca/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {

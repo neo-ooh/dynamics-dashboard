@@ -43,6 +43,11 @@ h1 {
   min-width: 830px;
   margin: 100px auto 50px;
 
+  &.no-sidebar {
+    width: 830px;
+    margin: 100px auto;
+  }
+
   #sidebar + & {
     margin: 100px 50px 50px calc(#{$sidebar-width} + 95px);
   }

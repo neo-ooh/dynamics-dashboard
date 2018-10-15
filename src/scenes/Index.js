@@ -30,7 +30,7 @@ class Index extends Component {
 
   render () {
     return (
-      <section className="content-column">
+      <section className="content-column no-sidebar">
         <h1>{ this.props.intl.formatMessage(this.messages.dynamics) }</h1>
         <div className="big-card-ensemble">
           { this.props.dynamics.map(dynamic =>

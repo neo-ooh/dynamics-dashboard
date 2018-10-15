@@ -62,4 +62,8 @@
   &:not(:first-child) {
     margin-left: 20px;
   }
+
+  .selectable-card-list + & {
+    margin-left: 0;
+  }
 }
