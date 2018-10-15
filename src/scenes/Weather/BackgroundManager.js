@@ -183,6 +183,7 @@ class BackgroundManager extends Component {
             onChange={ this.onSelectionMethodChange }
             selected={ this.state.selection }
           />
+          <Vhr />
           <Select
             label={ this.props.intl.formatMessage(BackgroundManager.messages.period) }
             options={ this.periods }
