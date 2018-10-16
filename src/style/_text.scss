@@ -81,3 +81,14 @@
   font-size: 13px;
   color: $black;
 }
+
+
+@mixin text {
+  font-size: 13px;
+  // font-weight: normal;
+  // font-style: normal;
+  // font-stretch: normal;
+  // line-height: 1.46;
+  // letter-spacing: normal;
+  color: $black;
+}

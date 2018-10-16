@@ -48,6 +48,12 @@ class APIKeyEditor extends Component {
     })
   }
 
+  onDelete = () => {
+    api.delete('/keys/' + this.state.key.id).then(response => {
+      this.props.history.push('/params/api-keys')
+    })
+  }
+
   render () {
     if(this.state.key === null) return null
     return (
@@ -73,6 +79,15 @@ class APIKeyEditor extends Component {
             value={ this.props.intl.formatMessage(messages.params.save) }
             onClick={ this.onSave }
             primary />
+        </div>
+        <h1>{ this.props.intl.formatMessage(messages.params.revokeAPIKeyTitle) }</h1>
+        <p className="text-zone">
+          { this.props.intl.formatMessage(messages.params.revokeAPIKeyText) }
+        </p>
+        <div className="button-row right">
+          <Button
+            value={ this.props.intl.formatMessage(messages.params.delete) }
+            onClick={ this.onDelete } />
         </div>
       </section>
     )

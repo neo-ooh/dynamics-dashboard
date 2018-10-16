@@ -36,9 +36,24 @@ export default defineMessages({
     description: 'Save somthing',
     defaultMessage: 'Save',
   },
+  delete: {
+    id: 'dynamics.params.delete',
+    description: 'Delete something',
+    defaultMessage: 'Delete',
+  },
   APIKeyTitleName: {
     id: 'dynamics.params.keys.titleName',
     description: 'Name of the key with \'key\' attached',
     defaultMessage: '{name} API key',
+  },
+  revokeAPIKeyTitle: {
+    id: 'dynamics.params.keys.revokeTitle',
+    description: 'Revoke the API Key title',
+    defaultMessage: 'Revoke the key',
+  },
+  revokeAPIKeyText: {
+    id: 'dynamics.params.keys.revokeText',
+    description: 'Revoke the API Key description',
+    defaultMessage: 'Revoking a key will prevent any further request made to the api using it to be sent informations.\n This cannot be undone.',
   },
 })
