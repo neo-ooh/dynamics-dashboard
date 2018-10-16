@@ -8,13 +8,27 @@ class SelectableCardList extends Component {
 
     this.state = {
       id: uuid(),
-      selected: this.props.default || this.props.items[0].value
+      selected: this.props.default || (this.props.multiple ? [] : this.props.items[0].value)
     }
   }
 
   onChange = e => {
-    this.props.onChange(e.target.value)
-    this.setState({ selected: e.target.value })
+    let selected = null
+    if(this.props.multiple) {
+      if(e.target.checked) {
+        selected = this.state.selected
+        selected.push(e.target.value)
+      } else {
+        // eslint-disable-next-line
+        selected = this.state.selected.filter(el => el != e.target.value)
+      }
+    } else {
+      selected = e.target.value
+    }
+
+    this.setState({ selected: selected }, () => {
+      this.props.onChange(this.state.selected)
+    })
   }
 
   render () {
@@ -24,16 +38,17 @@ class SelectableCardList extends Component {
         <div className="selectable-card-list-items">
           { this.props.items.map(({ value, label }, index) => {
             const itemID = 'item-' + this.state.id + '-' + value
+            const checked = this.props.multiple ? this.state.selected.includes(value) : value === this.state.selected
             return (
               <div className="selectable-card-radio-ensemble" key={itemID}>
                 <input
-                  type="radio"
+                  type={this.props.multiple ? 'checkbox' : 'radio'}
                   name={ 'list-' + this.state.id }
                   value={ value }
                   id={ itemID }
-                  className="selectable-card-radio-input"
+                  className="selectable-card-input"
                   onChange={ this.onChange }
-                  defaultChecked={ value === this.state.selected }/>
+                  defaultChecked={ checked }/>
                 <label
                   htmlFor={ itemID }
                   className="selectable-card-label">
@@ -52,7 +67,8 @@ class SelectableCardList extends Component {
 
 SelectableCardList.defaultProps = {
   onChange: () => {},
-  items: []
+  items: [],
+  multiple: false
 }
 
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { defineMessages, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
+import messages from 'library/messages'
 
 import DropZone from 'react-dropzone'
 
@@ -26,8 +27,8 @@ class EmptyBackgroundCard extends Component {
              style={{backgroundImage: 'url(' + parentBackground + ')'}}/>
         <span className="weather-background-card-placeholder-label">
           { this.props.uploading
-            ? this.props.intl.formatMessage(EmptyBackgroundCard.messages.uploading)
-            : this.props.intl.formatMessage(EmptyBackgroundCard.messages.dropImage) }
+            ? this.props.intl.formatMessage(messages.weather.uploading)
+            : this.props.intl.formatMessage(messages.weather.dropImage) }
         </span>
       </DropZone>
     )
@@ -37,18 +38,5 @@ class EmptyBackgroundCard extends Component {
 EmptyBackgroundCard.defaultProps = {
   onUpload: () => {}
 }
-
-EmptyBackgroundCard.messages = defineMessages({
-  dropImage: {
-    id: 'dynamics.weather.upload-background',
-    description: 'Message to tell the user to drop a background here',
-    defaultMessage: 'Drop a background here'
-  },
-  uploading: {
-    id: 'dynamics.weather.uploading',
-    description: 'Message to tell the user it\'s background is uploading',
-    defaultMessage: 'Uploading'
-  }
-})
 
 export default injectIntl(EmptyBackgroundCard)

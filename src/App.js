@@ -11,11 +11,13 @@ import LoginPage from 'scenes/LoginPage'
 import Index from 'scenes/Index'
 import ErrorPopUp from 'scenes/ErrorPopUp'
 
+import Weather from 'scenes/Weather'
+import Params from 'scenes/Params'
+
 import { withCookies } from 'react-cookie'
 
 // LOCALIZATIONS
 import { injectIntl } from 'react-intl'
-import Weather from 'scenes/Weather'
 
 import './style/main.scss'
 
@@ -49,7 +51,7 @@ class App extends Component {
 
     this.props.cookies.set('user', { name: userInfos.name, token: userInfos.token }, {
       path: '/',
-      maxAge: 3600 * 4
+      maxAge: 900
     })
 
     this.setState({
@@ -82,7 +84,6 @@ class App extends Component {
   dynamics = ['weather']
 
   dynamicsHomeComponents = {
-    news: null,
     weather: Weather
   }
 
@@ -115,6 +116,7 @@ class App extends Component {
           { this.dynamics.map(dynamic => (
             <Route key={dynamic} path={'/dynamic/' + dynamic} component={this.dynamicsHomeComponents[dynamic]} />
           )) }
+          <Route key="params" path={'/params'} component={Params} />
         </Switch>
         <ErrorPopUp
           message={ this.state.error }

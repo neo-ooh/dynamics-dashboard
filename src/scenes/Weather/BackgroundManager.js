@@ -1,14 +1,15 @@
 import React, { Component } from 'react'
 
-import { defineMessages, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
+import messages from 'library/messages'
+import api from 'library/api'
+
+import BackgroundsList from './BackgroundManager/BackgroundsList'
+import AddCityWindow from './BackgroundManager/AddCityWindow'
+import ToggleSwitch from 'components/ToggleSwitch'
 import { Link } from 'react-router-dom'
 import Select from 'components/Select'
 import Vhr from 'components/Vhr'
-
-import api from 'library/api'
-import ToggleSwitch from 'components/ToggleSwitch'
-import BackgroundsList from './BackgroundManager/BackgroundsList'
-import AddCityWindow from './BackgroundManager/AddCityWindow'
 
 class BackgroundManager extends Component {
   constructor (props) {
@@ -29,23 +30,23 @@ class BackgroundManager extends Component {
   }
 
   provinces = [
-    { value: 'PE', label: this.props.intl.formatMessage(BackgroundManager.messages.princeEdward) },
-    { value: 'NL', label: this.props.intl.formatMessage(BackgroundManager.messages.labrador) },
-    { value: 'NB', label: this.props.intl.formatMessage(BackgroundManager.messages.newBrunswick) },
-    { value: 'NS', label: this.props.intl.formatMessage(BackgroundManager.messages.novaScotia) },
-    { value: 'QC', label: this.props.intl.formatMessage(BackgroundManager.messages.quebec) },
-    { value: 'ON', label: this.props.intl.formatMessage(BackgroundManager.messages.ontario) },
-    { value: 'MB', label: this.props.intl.formatMessage(BackgroundManager.messages.manitoba) },
-    { value: 'SK', label: this.props.intl.formatMessage(BackgroundManager.messages.saskatchewan) },
-    { value: 'AB', label: this.props.intl.formatMessage(BackgroundManager.messages.alberta) },
-    { value: 'BC', label: this.props.intl.formatMessage(BackgroundManager.messages.britishColumbia) },
+    { value: 'PE', label: this.props.intl.formatMessage(messages.app.princeEdward) },
+    { value: 'NL', label: this.props.intl.formatMessage(messages.app.labrador) },
+    { value: 'NB', label: this.props.intl.formatMessage(messages.app.newBrunswick) },
+    { value: 'NS', label: this.props.intl.formatMessage(messages.app.novaScotia) },
+    { value: 'QC', label: this.props.intl.formatMessage(messages.app.quebec) },
+    { value: 'ON', label: this.props.intl.formatMessage(messages.app.ontario) },
+    { value: 'MB', label: this.props.intl.formatMessage(messages.app.manitoba) },
+    { value: 'SK', label: this.props.intl.formatMessage(messages.app.saskatchewan) },
+    { value: 'AB', label: this.props.intl.formatMessage(messages.app.alberta) },
+    { value: 'BC', label: this.props.intl.formatMessage(messages.app.britishColumbia) },
   ]
 
   periods = [
-    { value: 'MORNING', label: this.props.intl.formatMessage(BackgroundManager.messages.morning) },
-    { value: 'DAY', label: this.props.intl.formatMessage(BackgroundManager.messages.day) },
-    { value: 'DUSK', label: this.props.intl.formatMessage(BackgroundManager.messages.dusk) },
-    { value: 'NIGHT', label: this.props.intl.formatMessage(BackgroundManager.messages.night) },
+    { value: 'MORNING', label: this.props.intl.formatMessage(messages.weather.morning) },
+    { value: 'DAY', label: this.props.intl.formatMessage(messages.weather.day) },
+    { value: 'DUSK', label: this.props.intl.formatMessage(messages.weather.dusk) },
+    { value: 'NIGHT', label: this.props.intl.formatMessage(messages.weather.night) },
   ]
 
   supports = [
@@ -55,8 +56,8 @@ class BackgroundManager extends Component {
   ]
 
   selectionMethods = [
-    { value: 'WEATHER', label: this.props.intl.formatMessage(BackgroundManager.messages.selectionMethodWeather) },
-    { value: 'RANDOM', label: this.props.intl.formatMessage(BackgroundManager.messages.selectionMethodRandom) },
+    { value: 'WEATHER', label: this.props.intl.formatMessage(messages.weather.selectionMethodWeather) },
+    { value: 'RANDOM', label: this.props.intl.formatMessage(messages.weather.selectionMethodRandom) },
   ]
 
   onProvinceChange = province => {
@@ -85,7 +86,6 @@ class BackgroundManager extends Component {
   }
 
   onCityAdd = cityName => {
-    console.log(cityName)
     const cities = this.state.cities
     cities.push({
       city: cityName,
@@ -132,7 +132,7 @@ class BackgroundManager extends Component {
   componentDidMount () {
     // Sort provinces
     this.provinces.sort(this.sortAlphabetically)
-    this.provinces.unshift({ value: '--', label: this.props.intl.formatMessage(BackgroundManager.messages.allProvinces) })
+    this.provinces.unshift({ value: '--', label: this.props.intl.formatMessage(messages.weather.allProvinces) })
 
     // Retrieve cities
     api.get('/dynamics/weather/backgrounds/cities').then(resp => {
@@ -149,8 +149,8 @@ class BackgroundManager extends Component {
         .filter(city => city.city !== '-')
         .map(city => ({ value: city.city, label: city.city }))
       cities.sort(this.sortAlphabetically)
-      cities.unshift({ value: '-', label: this.props.intl.formatMessage(BackgroundManager.messages.allCities) })
-      cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(BackgroundManager.messages.addCity) })
+      cities.unshift({ value: '-', label: this.props.intl.formatMessage(messages.weather.allCities) })
+      cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(messages.weather.addCity) })
     }
 
     return [
@@ -160,17 +160,17 @@ class BackgroundManager extends Component {
           <span className="nav-back-arrow">&lt;</span>
           Weather Dynamic
         </Link>
-        <h1>{ this.props.intl.formatMessage(BackgroundManager.messages.editBackgrounds) }</h1>
+        <h1>{ this.props.intl.formatMessage(messages.weather.editBackgrounds) }</h1>
         <div className="filters">
           <Select
-            label={ this.props.intl.formatMessage(BackgroundManager.messages.province) }
+            label={ this.props.intl.formatMessage(messages.weather.province) }
             options={ this.provinces }
             onChange={ this.onProvinceChange }
             width={225}
             value={this.state.province} />
           { this.state.province !== '--' && (
             <Select
-              label={ this.props.intl.formatMessage(BackgroundManager.messages.city) }
+              label={ this.props.intl.formatMessage(messages.weather.city) }
               options={ cities }
               onChange={ this.onCityChange }
               width={175}
@@ -178,19 +178,19 @@ class BackgroundManager extends Component {
           ) }
           <Vhr />
           <ToggleSwitch
-            label={ this.props.intl.formatMessage(BackgroundManager.messages.selectionMethod) }
+            label={ this.props.intl.formatMessage(messages.weather.selectionMethod) }
             items={ this.selectionMethods }
             onChange={ this.onSelectionMethodChange }
             selected={ this.state.selection }
           />
           <Vhr />
           <Select
-            label={ this.props.intl.formatMessage(BackgroundManager.messages.period) }
+            label={ this.props.intl.formatMessage(messages.weather.period) }
             options={ this.periods }
             onChange={ this.onPeriodChange }
             width={ 125 }/>
           <Select
-            label={ this.props.intl.formatMessage(BackgroundManager.messages.support) }
+            label={ this.props.intl.formatMessage(messages.weather.support) }
             options={ this.supports }
             onChange={ this.onSupportChange }
             width={ 125 }/>
@@ -213,133 +213,5 @@ class BackgroundManager extends Component {
     ]
   }
 }
-
-BackgroundManager.messages = defineMessages({
-  editBackgrounds: {
-    id: 'dynamics.weather.edit-backgrounds',
-    description: 'Background manager title',
-    defaultMessage: 'Edit Backgrounds',
-  },
-  province: {
-    id: 'dynamics.weather.province',
-    description: 'A canadian province',
-    defaultMessage: 'Province',
-  },
-  city: {
-    id: 'dynamics.weather.city',
-    description: 'A city',
-    defaultMessage: 'City',
-  },
-  period: {
-    id: 'dynamics.weather.period',
-    description: 'Period of day used by the weather',
-    defaultMessage: 'Time of day',
-  },
-  morning: {
-    id: 'dynamics.weather.period.morning',
-    description: 'Morning period of the day',
-    defaultMessage: 'Morning',
-  },
-  day: {
-    id: 'dynamics.weather.period.day',
-    description: 'When-the-sun-has-risen-up period of the day',
-    defaultMessage: 'Day',
-  },
-  dusk: {
-    id: 'dynamics.weather.period.dusk',
-    description: 'dusk period of the day',
-    defaultMessage: 'Dusk',
-  },
-  night: {
-    id: 'dynamics.weather.period.night',
-    description: 'Night period of the day',
-    defaultMessage: 'Night',
-  },
-  selectionMethod: {
-    id: 'dynamics.weather.background-selection',
-    description: 'Selection method used to select a background by the dynamic',
-    defaultMessage: 'Selection method',
-  },
-  selectionMethodWeather: {
-    id: 'dynamics.weather.background-selection.weather',
-    description: 'Selecting the background using the current weather',
-    defaultMessage: 'Weather',
-  },
-  selectionMethodRandom: {
-    id: 'dynamics.weather.background-selection.random',
-    description: 'Selecting the background randomly',
-    defaultMessage: 'Random',
-  },
-  newBrunswick: {
-    id: 'dynamics.weather.province.new-brunswick',
-    description: 'Canadian province: New Brunswick',
-    defaultMessage: 'New Brunswick',
-  },
-  labrador: {
-    id: 'dynamics.weather.province.labrador',
-    description: 'Canadian province: Newfoundland and Labrador',
-    defaultMessage: 'Newfoundland and Labrador',
-  },
-  princeEdward: {
-    id: 'dynamics.weather.province.prince-edward',
-    description: 'Canadian province: Prince Edward Island',
-    defaultMessage: 'Prince Edward Island',
-  },
-  novaScotia: {
-    id: 'dynamics.weather.province.novia-scotia',
-    description: 'Canadian province: Nova Scotia',
-    defaultMessage: 'Nova Scotia',
-  },
-  quebec: {
-    id: 'dynamics.weather.province.quebec',
-    description: 'Canadian province: Quebec',
-    defaultMessage: 'Quebec',
-  },
-  ontario: {
-    id: 'dynamics.weather.province.ontario',
-    description: 'Canadian province: Ontario',
-    defaultMessage: 'Ontario',
-  },
-  manitoba: {
-    id: 'dynamics.weather.province.manitoba',
-    description: 'Canadian province: Manitoba',
-    defaultMessage: 'Manitoba',
-  },
-  saskatchewan: {
-    id: 'dynamics.weather.province.saskatchewan',
-    description: 'Canadian province: Saskatchewan',
-    defaultMessage: 'Saskatchewan',
-  },
-  alberta: {
-    id: 'dynamics.weather.province.alberta',
-    description: 'Canadian province: Alberta',
-    defaultMessage: 'Alberta',
-  },
-  britishColumbia: {
-    id: 'dynamics.weather.province.british-columbia',
-    description: 'Canadian province: British-Columbia',
-    defaultMessage: 'Colombie-Britannique',
-  },
-  allProvinces: {
-    id: 'dynamics.weather.province.all',
-    description: 'Canadian province: All of them',
-    defaultMessage: 'All',
-  },
-  allCities: {
-    id: 'dynamics.weather.cities.all',
-    description: 'Province cities: All of them',
-    defaultMessage: 'All',
-  },
-  addCity: {
-    id: 'dynamics.weather.cities.add',
-    description: 'Province cities: Add a new city to the list',
-    defaultMessage: 'Add',
-  },
-  support: {
-    id: 'dynamics.weather.support',
-    description: 'Neo support (DCA/FCL/LED/WAL)',
-    defaultMessage: 'Support',
-  },
-})
 
 export default injectIntl(BackgroundManager)

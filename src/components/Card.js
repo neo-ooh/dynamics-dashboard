@@ -15,6 +15,9 @@ class Card extends Component {
         <div className="card-label">
           { this.props.label }
         </div>
+        <div className="card-sublabel">
+          { this.props.sublabel }
+        </div>
       </div>
     )
   }
@@ -25,7 +28,8 @@ Card.defaultProps = {
   icon: '',
   onClick: () => {},
   background: '',
-  label: ''
+  label: '',
+  sublabel: '',
 }
 
 export default injectIntl(Card)

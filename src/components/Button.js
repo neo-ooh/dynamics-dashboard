@@ -7,12 +7,23 @@ class Button extends Component {
     return (
       <button
         type="button"
-        className={ 'button ' + (this.props.primary ? 'primary' : '') + ' ' + (this.props.loading ? 'loading' : '') }
+        className={
+          'button '
+          + (this.props.primary ? 'primary ' : ' ')
+          + (this.props.loading ? 'loading ' : ' ')
+          + (this.props.flush ? 'flush ' : ' ')
+        }
         onClick={ this.props.onClick }>
         { this.props.value }
       </button>
     )
   }
+}
+
+Button.defaultProps = {
+  primary: false,
+  loading: false,
+  flush: false,
 }
 
 export default injectIntl(Button)

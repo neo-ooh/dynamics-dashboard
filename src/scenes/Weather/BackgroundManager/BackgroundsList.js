@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { defineMessages, injectIntl } from 'react-intl'
-
+import { injectIntl } from 'react-intl'
+import messages from 'library/messages'
 import api from 'library/api'
+
 import weatherList from 'library/weatherList'
 import BackgroundCard from './BackgroundCard'
 
@@ -78,7 +79,7 @@ class BackgroundsList extends Component {
           bckgIndex = bckgIndex === -1 ? this.state.backgrounds.length : bckgIndex
 
           return <BackgroundCard
-            label={ this.props.intl.formatMessage(BackgroundsList.messages[weather]) }
+            label={ this.props.intl.formatMessage(messages.weather[weather]) }
             key={ index + background }
             background={ background }
             country={ this.props.country }
@@ -91,14 +92,14 @@ class BackgroundsList extends Component {
             onDelete={ this.getBackgrounds }
           />
         }) }
-          </div>
-          )
-        }
+      </div>
+    )
+  }
 
-        renderByCollection () {
-        const newBackgroundIndex = this.state.backgrounds ? this.state.backgrounds.length : 0
-        return (
-        <div className="background-list-container">
+  renderByCollection () {
+    const newBackgroundIndex = this.state.backgrounds ? this.state.backgrounds.length : 0
+    return (
+      <div className="background-list-container">
         { this.state.backgrounds &&
         this.state.backgrounds.map((background, index) => {
           return <BackgroundCard
@@ -116,89 +117,21 @@ class BackgroundsList extends Component {
           />
         }) }
         <BackgroundCard
-        label=""
-        key="add-background"
-        background={ null }
-        country={ this.props.country }
-        province={ this.props.province }
-        city={ this.props.city }
-        period={ this.props.period }
-        support={ this.props.support }
-        weather={ '-' }
-        onUpdate={ this.onCardUpdate.bind(this, newBackgroundIndex) }
-        onDelete={ this.getBackgrounds }
+          label=""
+          key="add-background"
+          background={ null }
+          country={ this.props.country }
+          province={ this.props.province }
+          city={ this.props.city }
+          period={ this.props.period }
+          support={ this.props.support }
+          weather={ '-' }
+          onUpdate={ this.onCardUpdate.bind(this, newBackgroundIndex) }
+          onDelete={ this.getBackgrounds }
         />
-        </div>
-        )
-      }
-        }
+      </div>
+    )
+  }
+}
 
-        BackgroundsList.messages = defineMessages({
-        'cloudy': {
-        id: 'dynamics.weather.cloudy',
-        description: 'Cloudy weather',
-        defaultMessage: 'Cloudy',
-      },
-        'fog': {
-        id: 'dynamics.weather.fog',
-        description: 'Foggy weather',
-        defaultMessage: 'Fog',
-      },
-        'heavy-rain': {
-        id: 'dynamics.weather.heavy-rain',
-        description: 'Heavy rain weather',
-        defaultMessage: 'Heavy rain',
-      },
-        'mostly-cloudy': {
-        id: 'dynamics.weather.mostly-cloudy',
-        description: 'Mostly cloudy weather',
-        defaultMessage: 'Mostly Cloudy',
-      },
-        'mostly-sunny': {
-        id: 'dynamics.weather.mostly-sunny',
-        description: 'Mostly sunny weather',
-        defaultMessage: 'Mostly Sunny',
-      },
-        'partly-sunny': {
-        id: 'dynamics.weather.partly-sunny',
-        description: 'Partly sunny weather',
-        defaultMessage: 'Partly sunny',
-      },
-        'rain-and-sun': {
-        id: 'dynamics.weather.rain-and-sun',
-        description: 'Rain and sun weather',
-        defaultMessage: 'Rain and sun',
-      },
-        'rain': {
-        id: 'dynamics.weather.rain',
-        description: 'Rainny weather',
-        defaultMessage: 'Rain',
-      },
-        'snow-and-sun': {
-        id: 'dynamics.weather.snow-and-sun',
-        description: 'Snow and sun weather',
-        defaultMessage: 'Snow and sun',
-      },
-        'snow': {
-        id: 'dynamics.weather.snow',
-        description: 'Snow weather',
-        defaultMessage: 'Snow',
-      },
-        'storm-clouds': {
-        id: 'dynamics.weather.storm-clouds',
-        description: 'Storm clouds weather',
-        defaultMessage: 'Storm clouds',
-      },
-        'sunny': {
-        id: 'dynamics.weather.sunny',
-        description: 'Sunny weather',
-        defaultMessage: 'Sunny',
-      },
-        'thunderstorms': {
-        id: 'dynamics.weather.thunderstorms',
-        description: 'Thunderstorms weather',
-        defaultMessage: 'Thunderstorms',
-      },
-      })
-
-        export default injectIntl(BackgroundsList)
+export default injectIntl(BackgroundsList)

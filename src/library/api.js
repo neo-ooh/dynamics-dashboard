@@ -28,6 +28,17 @@ class Api {
     })
   }
 
+  put = (url, data) => {
+    return this._send({
+      url: process.env.REACT_APP_API_URL + url,
+      method: 'PUT',
+      headers: {
+        'Authorization': this._userToken,
+      },
+      data: data
+    })
+  }
+
   delete = (url, params) => {
     return this._send({
       url: process.env.REACT_APP_API_URL + url,

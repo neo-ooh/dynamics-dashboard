@@ -1,22 +1,11 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import { injectIntl } from 'react-intl'
+import messages from 'library/messages'
 
-import { defineMessages, injectIntl } from 'react-intl'
+import { Link } from 'react-router-dom'
 import WideListCard from 'components/Cards/WideListCard'
 
 class Index extends Component {
-  messages = defineMessages({
-    generateURL: {
-      id: 'dynamics.weather.generate-url',
-      description: 'Screen where the user can generate a URL',
-      defaultMessage: 'Generate URL',
-    },
-    editBackgrounds: {
-      id: 'dynamics.weather.edit-backgrounds',
-      description: 'Screen where the user can edit the weather dynamic\'s backgrounds',
-      defaultMessage: 'Edit Backgrounds',
-    }
-  })
 
   render () {
     return (
@@ -24,12 +13,12 @@ class Index extends Component {
         <h1>Weather Dynamic</h1>
         <Link to="generate-url">
           <WideListCard
-            label={this.props.intl.formatMessage(this.messages.generateURL)}
+            label={this.props.intl.formatMessage(messages.weather.generateURL)}
             icon="link" />
         </Link>
         <Link to="backgrounds">
           <WideListCard
-            label={this.props.intl.formatMessage(this.messages.editBackgrounds)} />
+            label={this.props.intl.formatMessage(messages.weather.editBackgrounds)} />
         </Link>
       </section>
     )

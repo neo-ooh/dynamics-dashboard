@@ -43,6 +43,10 @@ h1 {
   min-width: 830px;
   margin: 100px auto 50px;
 
+  &.fixed-width {
+    width: 830px;
+  }
+
   &.no-sidebar {
     width: 830px;
     margin: 100px auto;

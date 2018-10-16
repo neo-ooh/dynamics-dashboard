@@ -2,8 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ce948c2-fa9e-4c50-9237-a2bef7b27ff6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Cards/DetailedListCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/library/messages.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scenes/Params.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scenes/Params/APIKeysList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scenes/Params/AddAPIKeyWindow.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/locales/en_CA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/locales/en_CA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/locales/fr_CA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/locales/fr_CA.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Cards/WideListCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/WideListCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SelectableCardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectableCardList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/library/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/library/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Sidebar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/_commons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/_commons.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/components/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/components/_Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_Card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/style/components/_SelectableCardList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_SelectableCardList.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -30,20 +59,22 @@
           <entry key="env" value="6" />
           <entry key="gitignore" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="js" value="190" />
+          <entry key="js" value="332" />
           <entry key="json" value="17" />
           <entry key="md" value="1" />
-          <entry key="scss" value="50" />
+          <entry key="png" value="1" />
+          <entry key="scss" value="67" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="6" />
+          <entry key="Image" value="1" />
           <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="190" />
+          <entry key="JavaScript" value="332" />
           <entry key="Markdown" value="1" />
           <entry key="PLAIN_TEXT" value="2" />
-          <entry key="SCSS" value="50" />
+          <entry key="SCSS" value="67" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
@@ -51,18 +82,18 @@
         <counts>
           <entry key="env" value="29" />
           <entry key="gitignore" value="56" />
-          <entry key="js" value="13634" />
+          <entry key="js" value="19155" />
           <entry key="json" value="209" />
-          <entry key="scss" value="2674" />
+          <entry key="scss" value="2952" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="29" />
           <entry key="JSON" value="209" />
-          <entry key="JavaScript" value="13634" />
+          <entry key="JavaScript" value="19155" />
           <entry key="PLAIN_TEXT" value="56" />
-          <entry key="SCSS" value="2674" />
+          <entry key="SCSS" value="2952" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
@@ -77,10 +108,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
+            <entry file="file://$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="305">
-                  <caret line="72" column="74" lean-forward="true" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+                <state relative-caret-position="608">
+                  <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
@@ -88,28 +119,50 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="603">
-                  <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
+        <splitter split-orientation="vertical" split-proportion="0.4739819">
+          <split-first>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/library/api.js">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="192">
+                      <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-first>
+          <split-second>
+            <leaf>
+              <file pinned="false" current-in-tab="true">
+                <entry file="file://$PROJECT_DIR$/src/style/components/_Button.scss">
+                  <provider selected="true" editor-type-id="text-editor">
+                    <state relative-caret-position="168">
+                      <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+                    </state>
+                  </provider>
+                </entry>
+              </file>
+            </leaf>
+          </split-second>
+        </splitter>
       </split-second>
     </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
         <option value="React Component" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>this.mes</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -117,54 +170,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/style/_variables.scss" />
-        <option value="$PROJECT_DIR$/src/style/scenes/_Sidebar.scss" />
-        <option value="$PROJECT_DIR$/src/components/ToggleSelector.js" />
-        <option value="$PROJECT_DIR$/src/components/SwitchButton.js" />
-        <option value="$PROJECT_DIR$/src/components/SelectableCardList.js" />
-        <option value="$PROJECT_DIR$/src/assets/locales/en_CA.json" />
-        <option value="$PROJECT_DIR$/src/assets/locales/fr_CA.json" />
-        <option value="$PROJECT_DIR$/src/style/components/vhr.js" />
-        <option value="$PROJECT_DIR$/src/components/Vhr.js" />
-        <option value="$PROJECT_DIR$/src/style/components/_Vhr.scss" />
-        <option value="$PROJECT_DIR$/src/style/components/_ToggleSwitch.scss" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/src/components/Cards/DynamicBackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/components/ToggleSwitch.js" />
         <option value="$PROJECT_DIR$/src/library/backgrounds.json" />
-        <option value="$PROJECT_DIR$/src/scenes/Sidebar.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/Index.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather.js" />
         <option value="$PROJECT_DIR$/src/components/Cards/BigIconCard.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/DynamicBackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/components/Cards/ImageCard.js" />
-        <option value="$PROJECT_DIR$/src/components/Card.js" />
-        <option value="$PROJECT_DIR$/src/style/components/_Card.scss" />
-        <option value="$PROJECT_DIR$/src/library/api.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/style/main.scss" />
-        <option value="$PROJECT_DIR$/src/style/components/_Button.scss" />
         <option value="$PROJECT_DIR$/src/style/components/_PromptWindow.scss" />
         <option value="$PROJECT_DIR$/src/components/Select.js" />
         <option value="$PROJECT_DIR$/src/components/PromptWindow.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard.js" />
-        <option value="$PROJECT_DIR$/src/scenes/LoginPage.js" />
-        <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/components/TextField.js" />
-        <option value="$PROJECT_DIR$/src/scenes/Index.js" />
-        <option value="$PROJECT_DIR$/src/style/_commons.scss" />
-        <option value="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" />
         <option value="$PROJECT_DIR$/src/style/components/_Select.scss" />
         <option value="$PROJECT_DIR$/src/style/scenes/Weather/_GenerateURL.scss" />
+        <option value="$PROJECT_DIR$/src/scenes/Params/Index.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather.js" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/library/messages.js" />
+        <option value="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" />
+        <option value="$PROJECT_DIR$/src/scenes/LoginPage.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Index.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/Index.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" />
+        <option value="$PROJECT_DIR$/src/library/messages/app.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" />
+        <option value="$PROJECT_DIR$/src/library/messages/weather.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Sidebar.js" />
+        <option value="$PROJECT_DIR$/src/components/Cards/WideListCard.js" />
+        <option value="$PROJECT_DIR$/src/components/Cards/DetailedListCard.js" />
+        <option value="$PROJECT_DIR$/src/components/Card.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Params/addAPIKeyWindow.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" />
+        <option value="$PROJECT_DIR$/src/components/Button.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Params.js" />
+        <option value="$PROJECT_DIR$/src/style/components/_SelectableCardList.scss" />
+        <option value="$PROJECT_DIR$/src/style/components/_Card.scss" />
+        <option value="$PROJECT_DIR$/src/library/messages/params.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Params/AddAPIKeyWindow.js" />
+        <option value="$PROJECT_DIR$/src/style/_commons.scss" />
+        <option value="$PROJECT_DIR$/src/style/components/_Button.scss" />
+        <option value="$PROJECT_DIR$/src/library/api.js" />
+        <option value="$PROJECT_DIR$/src/components/SelectableCardList.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Params/APIKeysList.js" />
+        <option value="$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js" />
       </list>
     </option>
   </component>
@@ -217,7 +273,27 @@
               <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
               <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Cards" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
@@ -229,7 +305,28 @@
               <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
               <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="library" type="462c0819:PsiDirectoryNode" />
+              <item name="messages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Header" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="scenes" type="462c0819:PsiDirectoryNode" />
+              <item name="Params" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
@@ -245,19 +342,6 @@
               <item name="scenes" type="462c0819:PsiDirectoryNode" />
               <item name="Weather" type="462c0819:PsiDirectoryNode" />
               <item name="BackgroundManager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dynamics-dashboard" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dynamics-dashboard" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="style" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -349,9 +433,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.start" />
         <item itemvalue="npm.compile-translations" />
         <item itemvalue="npm.extract-messages" />
+        <item itemvalue="npm.start" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -373,18 +457,18 @@
       <workItem from="1539484171332" duration="9935000" />
       <workItem from="1539550714787" duration="5447000" />
       <workItem from="1539576563587" duration="679000" />
-      <workItem from="1539640252210" duration="1933000" />
+      <workItem from="1539640252210" duration="15742000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45735000" />
+    <option name="totallyTimeSpent" value="59544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6945701" visible="true" weight="0.15814696" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6945701" visible="true" weight="0.15814696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.30542988" side_tool="true" visible="true" weight="0.15814696" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -399,7 +483,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.21769911" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.21769911" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -414,126 +498,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/assets/locales/en_CA.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="21" column="61" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/locales/fr_CA.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_TextField.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="17" column="29" lean-forward="true" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Vhr.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_Vhr.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_ToggleSwitch.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-plugin-react-intl-pot/README.md" />
-    <entry file="file://$PROJECT_DIR$/node_modules/babel-plugin-react-intl-pot/lib/index.js" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/ToggleSwitch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Sidebar.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="32" lean-forward="true" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Cards/BigIconCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/ErrorPopUp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="17" lean-forward="true" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/messages/src/scenes/Weather/BackgroundManager/BackgroundCard.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Cards/ImageCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="14" lean-forward="true" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/messages/src/scenes/Weather/BackgroundManager.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_Card.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-271">
-          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -545,13 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -576,38 +533,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="41" column="49" selection-start-line="41" selection-start-column="49" selection-end-line="41" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/main.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_Button.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="47" column="13" lean-forward="true" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/components/_PromptWindow.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -618,48 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PromptWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="27" column="12" lean-forward="true" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/LoginPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="78" column="17" selection-start-line="78" selection-start-column="17" selection-end-line="78" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/TextField.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -667,43 +554,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/style/scenes/_Index.scss">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="34" column="43" lean-forward="true" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style/_commons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="43" column="26" lean-forward="true" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="140" column="20" lean-forward="true" selection-start-line="140" selection-start-column="20" selection-end-line="140" selection-end-column="20" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/style/components/_Select.scss">
       <provider selected="true" editor-type-id="text-editor">
@@ -712,24 +564,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SelectableCardList.js">
+    <entry file="file://$PROJECT_DIR$/ressources/Mindboard/App Nav.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Params/Index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="304">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Card.js">
+    <entry file="file://$PROJECT_DIR$/src/library/messages.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" column="3" lean-forward="true" selection-start-line="19" selection-start-column="3" selection-end-line="19" selection-end-column="3" />
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/ErrorPopUp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="33" column="82" selection-start-line="33" selection-start-column="82" selection-end-line="33" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Header.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/LoginPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="67" column="74" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="12" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="75" column="13" lean-forward="true" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/messages/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="69" column="38" selection-start-line="69" selection-start-column="38" selection-end-line="69" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
-          <caret line="72" column="74" lean-forward="true" selection-start-line="72" selection-start-column="74" selection-end-line="72" selection-end-column="74" />
+          <caret line="115" column="43" selection-start-line="115" selection-start-column="43" selection-end-line="115" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="373">
+          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/messages/weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="194" column="39" lean-forward="true" selection-start-line="194" selection-start-column="39" selection-end-line="194" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="24" lean-forward="true" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2121">
+          <caret line="118" column="60" selection-start-line="118" selection-start-column="60" selection-end-line="118" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Cards/WideListCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Cards/DetailedListCard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/_text.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="22" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Card.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="9" lean-forward="true" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PromptWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="31" lean-forward="true" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -740,10 +710,136 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="24" column="42" lean-forward="true" selection-start-line="24" selection-start-column="42" selection-end-line="24" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/components/_PromptWindow.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="38" column="49" selection-start-line="38" selection-start-column="49" selection-end-line="38" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="603">
-          <caret line="185" column="17" selection-start-line="185" selection-start-column="17" selection-end-line="185" selection-end-column="17" />
+        <state relative-caret-position="298">
+          <caret line="166" column="38" lean-forward="true" selection-start-line="166" selection-start-column="38" selection-end-line="166" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Sidebar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="16" lean-forward="true" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Weather/Index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Params.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="32" lean-forward="true" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/components/_SelectableCardList.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/components/_Card.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="137" column="20" lean-forward="true" selection-start-line="137" selection-start-column="20" selection-end-line="137" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/_commons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="56" column="3" lean-forward="true" selection-start-line="56" selection-start-column="3" selection-end-line="56" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/style/components/_Button.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="64" column="18" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SelectableCardList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Params/APIKeysList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="81" column="17" selection-start-line="81" selection-start-column="17" selection-end-line="81" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/messages/params.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Params/AddAPIKeyWindow.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
         </state>
       </provider>
     </entry>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { defineMessages, injectIntl } from 'react-intl'
+import { injectIntl } from 'react-intl'
+import messages from 'library/messages'
 
 import PromptWindow from 'components/PromptWindow'
 import TextField from 'components/TextField'
@@ -27,18 +28,18 @@ class AddCityWindow extends Component {
   render () {
     return (
       <PromptWindow onClose={this.props.onClose} >
-        <h1>{ this.props.intl.formatMessage(AddCityWindow.messages.addCity) }</h1>
+        <h1>{ this.props.intl.formatMessage(messages.weather.addCityWindowTitle) }</h1>
         <TextField
-          label={ this.props.intl.formatMessage(AddCityWindow.messages.cityName) }
+          label={ this.props.intl.formatMessage(messages.weather.cityName) }
           onChange={this.onCityChange}
           value={this.state.city}
           focus />
         <div className="button-row right">
           <Button
-            value={ this.props.intl.formatMessage(AddCityWindow.messages.cancel) }
+            value={ this.props.intl.formatMessage(messages.weather.cancel) }
             onClick={ this.props.onClose } />
           <Button
-            value={ this.props.intl.formatMessage(AddCityWindow.messages.add) }
+            value={ this.props.intl.formatMessage(messages.weather.add) }
             onClick={ this.onAdd }
             primary />
         </div>
@@ -46,28 +47,5 @@ class AddCityWindow extends Component {
     )
   }
 }
-
-AddCityWindow.messages = defineMessages({
-  addCity: {
-    id: 'dynamics.weather.cities.window-title',
-    description: 'Province cities: Add a new city to the list',
-    defaultMessage: 'Add a city',
-  },
-  cityName: {
-    id: 'dynamics.weather.cities.name',
-    description: 'Name of the new city - text field label',
-    defaultMessage: 'City name',
-  },
-  cancel: {
-    id: 'dynamics.weather.cities.cancel',
-    description: 'Cancel adding a city button',
-    defaultMessage: 'Cancel',
-  },
-  add: {
-    id: 'dynamics.weather.cities.window-add',
-    description: 'Add a city button',
-    defaultMessage: 'Add',
-  },
-})
 
 export default injectIntl(AddCityWindow)

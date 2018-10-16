@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
+import messages from 'library/messages'
+
 import TextField from 'components/TextField'
 import Button from 'components/Button'
-
-import { defineMessages, injectIntl } from 'react-intl'
-
+import { injectIntl } from 'react-intl'
 import api from 'library/api'
 
 class LoginPage extends Component {
@@ -16,30 +16,6 @@ class LoginPage extends Component {
       loading: false
     }
   }
-
-  // LOCALIZATION
-  messages = defineMessages({
-    title: {
-      id: 'dynamics.login.title',
-      description: 'Message to greet visitors',
-      defaultMessage: 'Please log in.',
-    },
-    email: {
-      id: 'dynamics.login.email',
-      description: 'Placeholder for the email input field',
-      defaultMessage: 'e-Mail address',
-    },
-    password: {
-      id: 'dynamics.login.password',
-      description: 'Placeholder for the password input field',
-      defaultMessage: 'Password',
-    },
-    login: {
-      id: 'dynamics.login.button',
-      description: 'Text displayed on the log-in button',
-      defaultMessage: 'Log in',
-    },
-  })
 
   // EVENTS
   onEmailChange = e => {
@@ -74,22 +50,22 @@ class LoginPage extends Component {
   render () {
     return (
       <section className="login-page">
-        <h3>{ this.props.intl.formatMessage(this.messages.title) }</h3>
+        <h3>{ this.props.intl.formatMessage(messages.app.loginTitle) }</h3>
         <form>
           <TextField
-            label={ this.props.intl.formatMessage(this.messages.email) }
+            label={ this.props.intl.formatMessage(messages.app.loginEmail) }
             placeholder="neo@traffic.com"
             onChange={ this.onEmailChange }
             focus
             onEnter={ this.onLogin }/>
           <TextField
             type="password"
-            label={ this.props.intl.formatMessage(this.messages.password) }
+            label={ this.props.intl.formatMessage(messages.app.loginPassword) }
             placeholder="•••••"
             onChange={ this.onPasswordChange }
             onEnter={ this.onLogin } />
           <Button
-            value={ this.props.intl.formatMessage(this.messages.login)}
+            value={ this.props.intl.formatMessage(messages.app.loginButton)}
             onClick={ this.onLogin }
             loading={ this.state.loading }/>
         </form>

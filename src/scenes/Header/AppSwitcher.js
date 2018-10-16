@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import messages from 'library/messages'
 
-import { injectIntl, FormattedMessage } from 'react-intl'
+import { injectIntl } from 'react-intl'
 
 class AppSwitcher extends Component {
   constructor (props) {
@@ -41,10 +42,7 @@ class AppSwitcher extends Component {
       <section className={'app-switcher-window ' + isHidden} key="window">
         <div className="app-switcher-up-arrow" />
         <div className="app-switcher-title">
-          <FormattedMessage
-            id="app-switcher.title"
-            description="Title on top of the app switcher, preceding the list of Neo's apps"
-            defaultMessage="Neo apps"/>
+          { this.props.intl.formatMessage(messages.app.appSwitcherTitle) }
         </div>
         <hr />
         {

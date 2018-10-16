@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-
-import { injectIntl } from 'react-intl'
 import Card from '../Card'
 
 class WideListCard extends Component {
@@ -12,4 +10,4 @@ class WideListCard extends Component {
   }
 }
 
-export default injectIntl(WideListCard)
+export default WideListCard

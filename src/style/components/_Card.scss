@@ -16,6 +16,10 @@
     transition: .15s ease;
   }
 
+  .card-sublabel {
+    transition: .15s ease;
+  }
+
   //  BIG ICON CARD
   &.card-big-icon {
     width: 260px;
@@ -103,16 +107,35 @@
     }
   }
 
-  &:hover .card-label {
+  &.card-detailed-list {
+    width: 830px;
+    padding: 15px;
+    margin-top: 20px;
+
+    text-align: left;
+
+    .card-label {
+      @include sidebar-section;
+    }
+
+    .card-sublabel {
+      @include field-text;
+      color: $grey-dark;
+    }
+  }
+
+  &:hover .card-label,
+  &:hover .card-sublabel {
     color: $highlight-light;
   }
 
-  input[type=radio]:checked + label>&,
+  input:checked + label>&,
   &:active {
     background-color: $highlight-light;
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1) inset;
 
-    .card-label {
+    .card-label,
+    .card-sublabel {
       color: $white;
     }
   }
