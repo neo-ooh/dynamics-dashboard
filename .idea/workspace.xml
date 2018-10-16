@@ -2,37 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ce948c2-fa9e-4c50-9237-a2bef7b27ff6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Cards/DetailedListCard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/library/messages.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scenes/Params.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scenes/Params/APIKeysList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scenes/Params/AddAPIKeyWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/locales/en_CA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/locales/en_CA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/locales/fr_CA.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/locales/fr_CA.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Cards/WideListCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Cards/WideListCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SelectableCardList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SelectableCardList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/library/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/library/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Header/AppSwitcher.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/LoginPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/AddCityWindow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/EmptyBackgroundCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundCard/FilledBackgroundCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/BackgroundsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/GenerateURL.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scenes/Weather/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scenes/Weather/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/_commons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/_commons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/components/_Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_Button.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/components/_Card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_Card.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/style/components/_SelectableCardList.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/style/components/_SelectableCardList.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,9 +28,9 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="env" value="6" />
-          <entry key="gitignore" value="2" />
+          <entry key="gitignore" value="3" />
           <entry key="htaccess" value="1" />
-          <entry key="js" value="332" />
+          <entry key="js" value="333" />
           <entry key="json" value="17" />
           <entry key="md" value="1" />
           <entry key="png" value="1" />
@@ -71,9 +42,9 @@
           <entry key=".env file" value="6" />
           <entry key="Image" value="1" />
           <entry key="JSON" value="17" />
-          <entry key="JavaScript" value="332" />
+          <entry key="JavaScript" value="333" />
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
           <entry key="SCSS" value="67" />
           <entry key="htaccess" value="1" />
         </counts>
@@ -81,8 +52,8 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="29" />
-          <entry key="gitignore" value="56" />
-          <entry key="js" value="19155" />
+          <entry key="gitignore" value="65" />
+          <entry key="js" value="19158" />
           <entry key="json" value="209" />
           <entry key="scss" value="2952" />
         </counts>
@@ -91,8 +62,8 @@
         <counts>
           <entry key=".env file" value="29" />
           <entry key="JSON" value="209" />
-          <entry key="JavaScript" value="19155" />
-          <entry key="PLAIN_TEXT" value="56" />
+          <entry key="JavaScript" value="19158" />
+          <entry key="PLAIN_TEXT" value="65" />
           <entry key="SCSS" value="2952" />
         </counts>
       </usages-collector>
@@ -108,10 +79,10 @@
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js">
+            <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="608">
-                  <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+                <state relative-caret-position="513">
+                  <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -162,6 +133,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>this.mes</find>
+      <find>./src/li</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,7 +147,6 @@
         <option value="$PROJECT_DIR$/src/components/Cards/BigIconCard.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather/BackgroundManager/DynamicBackgroundCard.js" />
         <option value="$PROJECT_DIR$/src/components/Cards/ImageCard.js" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/src/style/scenes/Weather/_BackgroundManager.scss" />
@@ -190,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/scenes/Params/Index.js" />
         <option value="$PROJECT_DIR$/src/scenes/Weather.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/library/messages.js" />
         <option value="$PROJECT_DIR$/src/scenes/ErrorPopUp.js" />
         <option value="$PROJECT_DIR$/src/scenes/LoginPage.js" />
         <option value="$PROJECT_DIR$/src/scenes/Index.js" />
@@ -221,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/components/SelectableCardList.js" />
         <option value="$PROJECT_DIR$/src/scenes/Params/APIKeysList.js" />
         <option value="$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js" />
+        <option value="$PROJECT_DIR$/src/library/messages.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -457,18 +429,18 @@
       <workItem from="1539484171332" duration="9935000" />
       <workItem from="1539550714787" duration="5447000" />
       <workItem from="1539576563587" duration="679000" />
-      <workItem from="1539640252210" duration="15742000" />
+      <workItem from="1539640252210" duration="16038000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59544000" />
+    <option name="totallyTimeSpent" value="59840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6945701" visible="true" weight="0.15814696" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6945701" visible="true" weight="0.15814696" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.30542988" side_tool="true" visible="true" weight="0.15814696" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -483,7 +455,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.21769911" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.5037274" side_tool="true" visible="true" weight="0.21769911" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -509,13 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="6" selection-start-line="26" selection-start-column="6" selection-end-line="26" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -571,13 +536,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/library/messages.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -838,8 +796,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/scenes/Params/APIKeyEditor.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="532">
+          <caret line="28" column="6" lean-forward="true" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/library/messages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
         </state>
       </provider>
     </entry>
