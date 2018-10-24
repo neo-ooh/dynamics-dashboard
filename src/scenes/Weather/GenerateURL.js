@@ -18,6 +18,7 @@ class GenerateURL extends Component {
       type: 'now',
       language: '',
       apiKey: '',
+      support: '',
       keys: []
     }
   }
@@ -59,14 +60,25 @@ class GenerateURL extends Component {
     this.setState({ apiKey: newKey })
   }
 
+  onSupportChanges = newSupport => {
+    this.setState({ support: newSupport })
+  }
+
   languages = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'en-CA', label: this.props.intl.formatMessage(messages.app.english) },
     { value: 'fr-CA', label: this.props.intl.formatMessage(messages.app.french) },
   ]
 
+  supports = [
+    { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
+    { value: 'DCA', label: 'DCA' },
+    { value: 'FLC', label: 'FCL' },
+    { value: 'LED', label: 'LED' },
+  ]
+
   generateURL = () => {
-    return 'https://weather.dynamics.ad-direct.ca/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + '&key=' + this.state.apiKey
+    return 'https://weather.dynamics.ad-direct.ca/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
@@ -92,6 +104,10 @@ class GenerateURL extends Component {
         <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
           options={ this.state.keys }
+          onChange={this.onAPIKeyChanges}/>
+        <Select
+          label={ this.props.intl.formatMessage(messages.weather.support) }
+          options={ this.state.supports }
           onChange={this.onAPIKeyChanges}/>
         <h5 className="jumbo-card-upper-title">
           { this.props.intl.formatMessage(messages.weather.generatedURL) }
