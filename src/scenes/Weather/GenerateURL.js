@@ -101,9 +101,9 @@ class GenerateURL extends Component {
           label={ this.props.intl.formatMessage(messages.weather.language) }
           items={ this.languages }
           onChange={this.onLanguageChanges}/>
-        <Select
+        <SelectableCardList
           label={ this.props.intl.formatMessage(messages.weather.support) }
-          options={ this.supports }
+          items={ this.supports }
           onChange={this.onSupportChanges}/>
         <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
