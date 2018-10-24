@@ -102,12 +102,12 @@ class GenerateURL extends Component {
           items={ this.languages }
           onChange={this.onLanguageChanges}/>
         <Select
+          label={ this.props.intl.formatMessage(messages.weather.support) }
+          options={ this.supports }
+          onChange={this.onSupportChanges}/>
+        <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
           options={ this.state.keys }
-          onChange={this.onAPIKeyChanges}/>
-        <Select
-          label={ this.props.intl.formatMessage(messages.weather.support) }
-          options={ this.state.supports }
           onChange={this.onAPIKeyChanges}/>
         <h5 className="jumbo-card-upper-title">
           { this.props.intl.formatMessage(messages.weather.generatedURL) }
