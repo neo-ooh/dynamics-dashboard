@@ -147,6 +147,7 @@ class BackgroundManager extends Component {
     }).then((response) => this.setState({
       selection: response.selection,
       selectionRevertDate: new Date(response['revert_date'] * 1000),
+      period: response.selection === 'RANDOM' ? 'ALL' : this.state.period,
     }))
   }
 
@@ -215,11 +216,13 @@ class BackgroundManager extends Component {
               value={this.state.selectionRevertDate} />
           ) }
           <Vhr />
-          <Select
-            label={ this.props.intl.formatMessage(messages.weather.period) }
-            options={ this.periods }
-            onChange={ this.onPeriodChange }
-            width={ 125 }/>
+          { this.state.selection !== 'RANDOM' && (
+            <Select
+              label={ this.props.intl.formatMessage(messages.weather.period) }
+              options={ this.periods }
+              onChange={ this.onPeriodChange }
+              width={ 125 }/>
+          ) }
           <Select
             label={ this.props.intl.formatMessage(messages.weather.support) }
             options={ this.supports }
