@@ -9,6 +9,7 @@ import AddCityWindow from './BackgroundManager/AddCityWindow'
 import ToggleSwitch from 'components/ToggleSwitch'
 import { Link } from 'react-router-dom'
 import Select from 'components/Select'
+import DateField from 'components/DateField'
 import Vhr from 'components/Vhr'
 
 class BackgroundManager extends Component {
@@ -19,9 +20,10 @@ class BackgroundManager extends Component {
       country: 'CA',
       province: '--',
       city: '-',
-      period: 'MORNING',
+      period: 'ALL',
       support: 'DCA',
       selection: '-',
+      selectionRevertDate: new Date(),
       provinces: [],
       cities: [],
       addCity: false,
@@ -43,6 +45,7 @@ class BackgroundManager extends Component {
   ]
 
   periods = [
+    { value: 'ALL', label: this.props.intl.formatMessage(messages.weather.allPeriods) },
     { value: 'MORNING', label: this.props.intl.formatMessage(messages.weather.morning) },
     { value: 'DAY', label: this.props.intl.formatMessage(messages.weather.day) },
     { value: 'DUSK', label: this.props.intl.formatMessage(messages.weather.dusk) },
@@ -52,7 +55,7 @@ class BackgroundManager extends Component {
   supports = [
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' },
-    { value: 'LED', label: 'LED' },
+    { value: 'WDE', label: 'WDE' },
   ]
 
   selectionMethods = [
@@ -111,20 +114,40 @@ class BackgroundManager extends Component {
   }
 
   onSelectionMethodChange = newMethod => {
-    api.post('/dynamics/weather/backgrounds/selection', {
+    // By default, always send a revert date for one week in the future.
+    // Users will change them as desired after
+    this.updateSelectionMethod(
+      newMethod,
+      (new Date()).getTime() + 7 * 24 * 60 * 60 * 1000
+    )
+  }
+
+  onSelectionMethodUpdate = response => {
+    this.setState({
+      selection: response.selection,
+      selectionRevertDate: new Date(response.location['revert_date'] * 1000),
+    })
+  }
+
+  onSelectionRevertDateChange = newRevertDate => {
+    this.setState({
+      selectionRevertDate: newRevertDate
+    })
+    this.updateSelectionMethod(this.state.selection, newRevertDate.getTime())
+
+  }
+
+  updateSelectionMethod = (newMethod, revertDate) => {
+    return api.post('/dynamics/weather/backgrounds/selection', {
       country: this.state.country,
       province: this.state.province,
       city: this.state.city,
       selection: newMethod,
+      revertDate: Math.floor(revertDate / 1000),
     }).then((response) => this.setState({
-      selection: newMethod
+      selection: response.selection,
+      selectionRevertDate: new Date(response['revert_date'] * 1000),
     }))
-  }
-
-  onSelectionMethodUpdate = newMethod => {
-    this.setState({
-      selection: newMethod
-    })
   }
 
   sortAlphabetically = (a, b) => a.label < b.label ? -1 : 1
@@ -183,6 +206,14 @@ class BackgroundManager extends Component {
             onChange={ this.onSelectionMethodChange }
             selected={ this.state.selection }
           />
+          { this.state.selection === 'RANDOM' && (
+            <DateField
+              label={ this.props.intl.formatMessage(messages.weather.selectionRevertDate) }
+              options={ cities }
+              onChange={ this.onSelectionRevertDateChange }
+              // width={175}
+              value={this.state.selectionRevertDate} />
+          ) }
           <Vhr />
           <Select
             label={ this.props.intl.formatMessage(messages.weather.period) }

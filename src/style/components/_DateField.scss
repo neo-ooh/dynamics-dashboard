@@ -1,0 +1,97 @@
+.date-field {
+    display: inline-flex;
+    flex-direction: column;
+
+    label {
+        margin-left: 5px;
+        @include field-label;
+    }
+
+    .date-field-private-input {
+        display: flex;
+        width: 155px;
+        height: 25px;
+        margin: 2px 0 0 0;
+        padding: 3px 0 0 7px;
+
+        background: #FFFFFF;
+
+        border:none;
+        border-radius: 3px;
+        box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+        outline: none;
+
+        @include field-text;
+    }
+
+    &:not(:last-child) {
+        margin-right: 20px;
+    }
+}
+
+.react-datepicker {
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.1);
+
+    .react-datepicker__triangle {
+        top: 1px;
+        border-bottom-color: $highlight-light!important;
+
+        &:before {
+            top: 1px!important;
+            border-bottom-color: $highlight-light!important;
+        }
+    }
+
+    .react-datepicker__navigation--previous,
+    .react-datepicker__navigation--previous:hover {
+        border-right-color: #FFFFFF;
+    }
+
+    .react-datepicker__navigation--next,
+    .react-datepicker__navigation--next:hover {
+        border-left-color: #FFFFFF;
+    }
+
+    .react-datepicker__month-container
+    .react-datepicker__header {
+        background-color: $highlight-light;
+        border-top-right-radius: 0;
+        border: none;
+
+        .react-datepicker__current-month,
+        .react-datepicker__day-name {
+            color: #FFFFFF;
+        }
+    }
+
+    .react-datepicker__time-container {
+        border-left: none;
+        .react-datepicker__header {
+            background-color: $highlight-light;
+            border-top-left-radius: 0;
+            border: none;
+
+            .react-datepicker-time__header {
+                color: #FFFFFF;
+            }
+        }
+
+        .react-datepicker__time {
+            border-left:1px solid $grey-ultralight;
+        }
+    }
+
+    .react-datepicker__day:hover {
+        background-color: $grey-ultralight;
+    }
+
+    .react-datepicker__day--keyboard-selected {
+        background-color: $highlight-light;
+
+        &:hover {
+            background-color: $highlight-dark;
+        }
+    }
+}

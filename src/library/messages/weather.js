@@ -86,6 +86,11 @@ export default defineMessages({
     description: 'Night period of the day',
     defaultMessage: 'Night',
   },
+  allPeriods: {
+    id: 'dynamics.weather.period.all',
+    description: 'Periods of the day: All of them',
+    defaultMessage: 'All',
+  },
   selectionMethod: {
     id: 'dynamics.weather.background-selection',
     description: 'Selection method used to select a background by the dynamic',
@@ -100,6 +105,11 @@ export default defineMessages({
     id: 'dynamics.weather.background-selection.random',
     description: 'Selecting the background randomly',
     defaultMessage: 'Random',
+  },
+  selectionRevertDate: {
+    id: 'dynamics.weather.background-selection.revert-date',
+    description: 'The revert date is the moment the selection method goes back from random to weather',
+    defaultMessage: 'Revert back date',
   },
   allProvinces: {
     id: 'dynamics.weather.province.all',

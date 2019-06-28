@@ -6,8 +6,7 @@
     margin: 20px 20px 0 0;
     vertical-align: top;
 
-    &.FCL,
-    &.LED {
+    &.FCL {
         width: 265px;
         height: 90px;
     }
@@ -15,6 +14,11 @@
     &.DCA {
         width: 180px;
         height: 265px;
+    }
+
+    &.WDE {
+        width: 265px;
+        height: 55px;
     }
 
     .weather-background-card-label {

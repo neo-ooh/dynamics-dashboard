@@ -22,6 +22,7 @@
     @include sidebar-link-grey;
 
     text-decoration: none;
+    text-transform: capitalize;
 
     &:hover {
       color: $grey-medium;

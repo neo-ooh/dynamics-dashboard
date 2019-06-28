@@ -12,6 +12,7 @@ class BackgroundsList extends Component {
 
     this.state = {
       selection: '',
+      location: {},
       backgrounds: null,
     }
   }
@@ -44,9 +45,10 @@ class BackgroundsList extends Component {
       support: this.props.support,
     }).then(response => {
       if (response === null) return
-      this.props.onSelectionMethodUpdate(response.selection)
+      this.props.onSelectionMethodUpdate(response)
 
       this.setState({
+        location: response.location,
         selection: response.selection,
         backgrounds: response.backgrounds,
       })
@@ -82,9 +84,7 @@ class BackgroundsList extends Component {
             label={ this.props.intl.formatMessage(messages.weather[weather]) }
             key={ index + background }
             background={ background }
-            country={ this.props.country }
-            province={ this.props.province }
-            city={ this.props.city }
+            location={ this.state.location }
             period={ this.props.period }
             support={ this.props.support }
             weather={ weather }
@@ -106,9 +106,7 @@ class BackgroundsList extends Component {
             label=""
             key={ index + background }
             background={ background }
-            country={ this.props.country }
-            province={ this.props.province }
-            city={ this.props.city }
+            location={ this.state.location }
             period={ this.props.period }
             support={ this.props.support }
             weather={ '-' }
@@ -120,9 +118,7 @@ class BackgroundsList extends Component {
           label=""
           key="add-background"
           background={ null }
-          country={ this.props.country }
-          province={ this.props.province }
-          city={ this.props.city }
+          location={ this.state.location }
           period={ this.props.period }
           support={ this.props.support }
           weather={ '-' }

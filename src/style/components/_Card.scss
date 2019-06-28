@@ -156,6 +156,10 @@
   &.link {
     @include card-icon('../assets/images/icons-link', 'png')
   }
+
+  &.image {
+    @include card-icon('../assets/images/icons-image', 'png')
+  }
 }
 
 .big-card-ensemble {

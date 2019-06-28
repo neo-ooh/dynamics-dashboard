@@ -18,7 +18,8 @@ class Index extends Component {
         </Link>
         <Link to="backgrounds">
           <WideListCard
-            label={this.props.intl.formatMessage(messages.weather.editBackgrounds)} />
+            label={this.props.intl.formatMessage(messages.weather.editBackgrounds)}
+            icon="image" />
         </Link>
       </section>
     )

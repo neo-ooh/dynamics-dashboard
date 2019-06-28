@@ -21,9 +21,7 @@ class BackgroundCard extends Component {
     })
 
     const formData = new FormData()
-    formData.append('country', this.props.country)
-    formData.append('province', this.props.province)
-    formData.append('city', this.props.city)
+    formData.append('location', this.props.location.id)
     formData.append('period', this.props.period)
     formData.append('support', this.props.support)
     formData.append('weather', this.props.weather)
@@ -47,12 +45,9 @@ class BackgroundCard extends Component {
   hasBackground () {
     if(this.props.background === null) return false
 
-    if(this.props.background.location.country === this.props.country &&
-       this.props.background.location.province === this.props.province &&
-       this.props.background.location.city === this.props.city
-    ) {
-      return true
-    }
+    const location = this.props.background.location.id || this.props.background.location
+
+    return location === this.props.location.id
   }
 
   render () {

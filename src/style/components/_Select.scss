@@ -59,8 +59,8 @@
     }
   }
 
-  &:not(:first-child) {
-    margin-left: 20px;
+  &:not(:last-child) {
+    margin-right: 20px;
   }
 
   .selectable-card-list + & {
