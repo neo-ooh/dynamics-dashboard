@@ -88,6 +88,13 @@ class BackgroundManager extends Component {
     })
   }
 
+  onCityAddClose = () => {
+    this.setState({
+      addCity: false,
+      city: this.state.lastCity,
+    })
+  }
+
   onCityAdd = cityName => {
     const cities = this.state.cities
     cities.push({
