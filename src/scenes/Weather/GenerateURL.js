@@ -80,7 +80,7 @@ class GenerateURL extends Component {
   ]
 
   generateURL = () => {
-    return 'https://weather.dynamics.ad-direct.ca/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_WEATHER_URL + '/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
