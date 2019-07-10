@@ -21,6 +21,11 @@
         height: 55px;
     }
 
+    &.SGL {
+        width: 133px;
+        height: 90px;
+    }
+
     .weather-background-card-label {
         @include field-label;
         margin-left: 5px;

@@ -56,6 +56,7 @@ class BackgroundManager extends Component {
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' },
     { value: 'WDE', label: 'WDE' },
+    { value: 'SGL', label: 'SGL' },
   ]
 
   selectionMethods = [
