@@ -76,7 +76,7 @@ class GenerateURL extends Component {
     { value: 'FLC', label: 'FCL' },
     { value: 'LED', label: 'LED' },
     { value: 'WDE', label: 'Halifax (WDE)' },
-    { value: 'SGL', label: 'One Screen (SGL)' },
+    { value: 'SHD', label: 'SHD' },
   ]
 
   generateURL = () => {
