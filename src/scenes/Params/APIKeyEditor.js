@@ -24,13 +24,14 @@ class APIKeyEditor extends Component {
       if(key === null) return
       this.setState({
         key: key,
-        dynamics: key.dynamics.map(dynamic => dynamic.id)
+        dynamics: key.dynamics.map(dynamic => String(dynamic.id))
       })
     })
   }
 
   dynamics = [
-    { label:'Weather', value: 1 }
+    { label:'Weather', value: "1" },
+    { label:'News', value: "4" },
   ]
 
   onDynamicUpdate = selected => {
@@ -41,7 +42,7 @@ class APIKeyEditor extends Component {
 
   onSave = () => {
     api.put('/keys/' + this.state.key.id, {
-      dynamics: this.state.dynamics,
+      dynamics: this.state.dynamics.map(dyn => Number(dyn)),
       name: this.state.key.name
     }).then(response => {
       this.props.history.push('/params/api-keys')

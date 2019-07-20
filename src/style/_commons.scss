@@ -38,6 +38,11 @@ h1 {
   margin: 0 0 10px;
 }
 
+h3 {
+  @include small-title;
+  margin: 10px 0 -10px 0;
+}
+
 .content-column {
   display: block;
   min-width: 830px;

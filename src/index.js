@@ -11,8 +11,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { IntlProvider, addLocaleData } from 'react-intl'
 import fr from 'react-intl/locale-data/fr'
 import en from 'react-intl/locale-data/en'
-import frenchMessages from './assets/locales/fr_CA'
-import englishMessages from './assets/locales/en_CA'
+import frenchMessages from './assets/locales/fr-CA'
+import englishMessages from './assets/locales/en-CA'
 
 // ENV
 import { config } from 'dotenv'

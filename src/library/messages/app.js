@@ -103,4 +103,9 @@ export default defineMessages({
     description: 'Title of the dynamic section on the home page',
     defaultMessage: 'Dynamics',
   },
+  selectAll: {
+    id: 'dynamics.selectable-cards.select-all',
+    description: 'Label of the button on a card list to select all of them',
+    defaultMessage: 'All',
+  }
 })

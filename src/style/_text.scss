@@ -27,6 +27,14 @@
   color: $black;
 }
 
+@mixin small-title
+{
+  font-family: Gotham;
+  font-size: 24px;
+  font-weight: 500;
+  color: $black;
+}
+
 @mixin card-big-caption-grey
 {
   font-family: Gotham;

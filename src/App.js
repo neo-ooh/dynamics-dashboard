@@ -11,6 +11,7 @@ import LoginPage from 'scenes/LoginPage'
 import Index from 'scenes/Index'
 import ErrorPopUp from 'scenes/ErrorPopUp'
 
+import News from 'scenes/News'
 import Weather from 'scenes/Weather'
 import Params from 'scenes/Params'
 
@@ -81,10 +82,11 @@ class App extends Component {
     this.setState({ error: null })
   }
 
-  dynamics = ['weather']
+  dynamics = ['news', 'weather']
 
   dynamicsHomeComponents = {
-    weather: Weather
+    weather: Weather,
+    news: News
   }
 
   render () {
