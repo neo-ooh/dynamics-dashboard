@@ -73,7 +73,7 @@ class GenerateURL extends Component {
   supports = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
-    { value: 'FLC', label: 'FCL' },
+    { value: 'FCL', label: 'FCL' },
     { value: 'LED', label: 'LED' },
     { value: 'WDE', label: 'Halifax (WDE)' },
     { value: 'SHD', label: 'SHD' },
