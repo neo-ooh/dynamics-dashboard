@@ -85,7 +85,7 @@ class GenerateURL extends Component {
   ]
 
   generateURL = () => {
-    return process.env.REACT_APP_NEWS_URL + '/?cat=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
