@@ -52,7 +52,7 @@ class App extends Component {
 
     this.props.cookies.set('user', { name: userInfos.name, token: userInfos.token }, {
       path: '/',
-      maxAge: 900
+      maxAge: 3600
     })
 
     this.setState({
