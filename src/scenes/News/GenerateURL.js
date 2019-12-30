@@ -18,7 +18,7 @@ class GenerateURL extends Component {
       availableCategories: {},
       categories: {},
       apiKey: '',
-      support: '',
+      design: '',
       keys: []
     }
   }
@@ -74,18 +74,18 @@ class GenerateURL extends Component {
     this.setState({ apiKey: newKey })
   }
 
-  onSupportChanges = newSupport => {
-    this.setState({ support: newSupport })
+  onDesignChanges = newDesign=> {
+    this.setState({ design: newDesign })
   }
 
-  supports = [
+  designs = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' }
   ]
 
   generateURL = () => {
-    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.design && '&design=' + this.state.design) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
@@ -110,9 +110,9 @@ class GenerateURL extends Component {
             selectAllShortcut/>
         ))}
         <SelectableCardList
-          label={ this.props.intl.formatMessage(messages.weather.support) }
-          items={ this.supports }
-          onChange={this.onSupportChanges}/>
+          label={ this.props.intl.formatMessage(messages.app.design) }
+          items={ this.designs }
+          onChange={this.onDesignChanges}/>
         <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
           options={ this.state.keys }

@@ -107,5 +107,10 @@ export default defineMessages({
     id: 'dynamics.selectable-cards.select-all',
     description: 'Label of the button on a card list to select all of them',
     defaultMessage: 'All',
+  },
+  design: {
+    id: 'dynamics.design',
+    description: 'Just the name design referring to a screen design',
+    defaultMessage: 'Design',
   }
 })

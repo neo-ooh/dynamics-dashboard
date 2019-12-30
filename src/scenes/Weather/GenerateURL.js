@@ -18,7 +18,7 @@ class GenerateURL extends Component {
       type: 'now',
       language: '',
       apiKey: '',
-      support: '',
+      design: '',
       keys: []
     }
   }
@@ -42,12 +42,6 @@ class GenerateURL extends Component {
     })
   }
 
-  weatherTypes = [
-    { value: 'now', label: this.props.intl.formatMessage(messages.weather.contentNow) },
-    { value: 'forecast', label: this.props.intl.formatMessage(messages.weather.contentForecast) },
-    { value: 'national', label: this.props.intl.formatMessage(messages.weather.contentNational) },
-  ]
-
   onWeatherTypeChanges = newType => {
     this.setState({ type: newType })
   }
@@ -60,9 +54,15 @@ class GenerateURL extends Component {
     this.setState({ apiKey: newKey })
   }
 
-  onSupportChanges = newSupport => {
-    this.setState({ support: newSupport })
+  onDesignChanges = newDesign => {
+    this.setState({ design: newDesign })
   }
+
+  weatherTypes = [
+    { value: 'now', label: this.props.intl.formatMessage(messages.weather.contentNow) },
+    { value: 'forecast', label: this.props.intl.formatMessage(messages.weather.contentForecast) },
+    { value: 'national', label: this.props.intl.formatMessage(messages.weather.contentNational) },
+  ]
 
   languages = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
@@ -70,17 +70,16 @@ class GenerateURL extends Component {
     { value: 'fr-CA', label: this.props.intl.formatMessage(messages.app.french) },
   ]
 
-  supports = [
+  designs = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
-    { value: 'FCL', label: 'FCL' },
-    { value: 'LED', label: 'LED' },
+    { value: 'FCL', label: 'FCL & LED' },
     { value: 'WDE', label: 'Halifax (WDE)' },
     { value: 'SHD', label: 'SHD' },
   ]
 
   generateURL = () => {
-    return process.env.REACT_APP_WEATHER_URL + '/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.support && '&support=' + this.state.support) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_WEATHER_URL + '/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.design && '&design=' + this.state.design) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
@@ -88,6 +87,17 @@ class GenerateURL extends Component {
   }
 
   render () {
+
+    let contentForDesign;
+
+    if(this.state.design === 'WDE') {
+      contentForDesign = this.weatherTypes.slice(0, 2)
+    } else if (this.state.design === 'SHD') {
+      contentForDesign = this.weatherTypes.slice(1, 2)
+    } else {
+      contentForDesign = this.weatherTypes
+    }
+
     return (
       <section className="content-column">
         <Link to="/dynamic/weather/" className="nav-back-upper-title">
@@ -96,17 +106,17 @@ class GenerateURL extends Component {
         </Link>
         <h1>{ this.props.intl.formatMessage(messages.weather.generateURL) }</h1>
         <SelectableCardList
+          label={ this.props.intl.formatMessage(messages.app.design) }
+          items={ this.designs }
+          onChange={this.onDesignChanges}/>
+        <SelectableCardList
           label={ this.props.intl.formatMessage(messages.weather.contentType) }
-          items={ this.weatherTypes }
+          items={ contentForDesign }
           onChange={this.onWeatherTypeChanges}/>
         <SelectableCardList
           label={ this.props.intl.formatMessage(messages.weather.language) }
           items={ this.languages }
           onChange={this.onLanguageChanges}/>
-        <SelectableCardList
-          label={ this.props.intl.formatMessage(messages.weather.support) }
-          items={ this.supports }
-          onChange={this.onSupportChanges}/>
         <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
           options={ this.state.keys }
