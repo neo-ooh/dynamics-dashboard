@@ -58,12 +58,6 @@ class GenerateURL extends Component {
     })
   }
 
-  weatherTypes = [
-    { value: 'now', label: this.props.intl.formatMessage(messages.weather.contentNow) },
-    { value: 'forecast', label: this.props.intl.formatMessage(messages.weather.contentForecast) },
-    { value: 'national', label: this.props.intl.formatMessage(messages.weather.contentNational) },
-  ]
-
   onCategoriesChanges = (lang, categories) => {
     let cats = this.state.categories
     cats[lang] = categories
@@ -81,7 +75,8 @@ class GenerateURL extends Component {
   designs = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
-    { value: 'FCL', label: 'FCL' }
+    { value: 'FCL', label: 'FCL' },
+    { value: 'PMP', label: 'Pompe Media Portrait' },
   ]
 
   generateURL = () => {
