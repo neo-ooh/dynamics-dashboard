@@ -80,7 +80,7 @@ class GenerateURL extends Component {
   ]
 
   generateURL = () => {
-    return process.env.REACT_APP_WEATHER_URL + '/?content=' + this.state.type + (this.state.language && '&lang=' + this.state.language) + (this.state.design && '&design=' + this.state.design) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_WEATHER_URL + '/?content=' + this.state.type + (this.state.language && '&locale=' + this.state.language) + (this.state.design && '&design=' + this.state.design) + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
