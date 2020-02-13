@@ -76,6 +76,7 @@ class GenerateURL extends Component {
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' },
+    { value: 'SHD', label: 'SHD' },
     { value: 'PMP', label: 'Pompe Media Portrait' },
   ]
 
