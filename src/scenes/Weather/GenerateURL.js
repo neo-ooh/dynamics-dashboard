@@ -93,7 +93,7 @@ class GenerateURL extends Component {
 
     if(this.state.design === 'WDE') {
       contentForDesign = this.weatherTypes.slice(0, 2)
-    } else if (this.state.design === 'SHD' || this.state.design === 'PML') {
+    } else if (this.state.design === 'PML') {
       contentForDesign = this.weatherTypes.slice(1, 2)
     } else {
       contentForDesign = this.weatherTypes
