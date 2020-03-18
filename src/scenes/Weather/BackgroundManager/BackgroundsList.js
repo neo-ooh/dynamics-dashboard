@@ -44,7 +44,8 @@ class BackgroundsList extends Component {
       period: this.props.period,
       support: this.props.support,
     }).then(response => {
-      if (response === null) return
+      if (response === null) { return }
+
       this.props.onSelectionMethodUpdate(response)
 
       this.setState({

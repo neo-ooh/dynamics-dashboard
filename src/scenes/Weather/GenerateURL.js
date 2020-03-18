@@ -75,7 +75,8 @@ class GenerateURL extends Component {
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL & LED' },
     { value: 'WDE', label: 'Halifax (WDE)' },
-    { value: 'SHD', label: 'SHD' },
+    { value: 'SHD', label: 'Sports HD' },
+    { value: 'PHD', label: 'Pompe Media HD' },
     { value: 'PML', label: 'Pompe Media Landscape' },
   ]
 
@@ -96,7 +97,7 @@ class GenerateURL extends Component {
     } else if (this.state.design === 'PML') {
       contentForDesign = this.weatherTypes.slice(1, 2)
     } else {
-      contentForDesign = this.weatherTypes
+      contentForDesign = this.weatherTypes6
     }
 
     return (

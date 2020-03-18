@@ -56,7 +56,8 @@ class BackgroundManager extends Component {
     { value: 'DCA', label: 'DCA' },
     { value: 'FCL', label: 'FCL' },
     { value: 'WDE', label: 'WDE' },
-    { value: 'SHD', label: 'SHD' },
+    { value: 'SHD', label: 'Sports HD' },
+    { value: 'PHD', label: 'Pompe Media HD' },
   ]
 
   selectionMethods = [
@@ -79,13 +80,6 @@ class BackgroundManager extends Component {
     this.setState({
       addCity: true,
       lastCity: this.state.city,
-    })
-  }
-
-  onCityAddClose = () => {
-    this.setState({
-      addCity: false,
-      city: this.state.lastCity,
     })
   }
 
@@ -184,6 +178,8 @@ class BackgroundManager extends Component {
       cities.unshift({ value: '-', label: this.props.intl.formatMessage(messages.weather.allCities) })
       cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(messages.weather.addCity) })
     }
+
+    console.log("selection", this.state.selection)
 
     return [
       <section className="content-column" key="background-manager">
