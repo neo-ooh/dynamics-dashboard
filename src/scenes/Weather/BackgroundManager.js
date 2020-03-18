@@ -231,7 +231,7 @@ class BackgroundManager extends Component {
             label={ this.props.intl.formatMessage(messages.weather.support) }
             options={ this.supports }
             onChange={ this.onSupportChange }
-            width={ 125 }/>
+            width={ 175 }/>
         </div>
         <BackgroundsList
           country={this.state.country}
