@@ -97,7 +97,7 @@ class GenerateURL extends Component {
     } else if (this.state.design === 'PML') {
       contentForDesign = this.weatherTypes.slice(1, 2)
     } else {
-      contentForDesign = this.weatherTypes6
+      contentForDesign = this.weatherTypes
     }
 
     return (
