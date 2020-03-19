@@ -5,13 +5,16 @@ class Api {
   _errorCallback = () => {}
   _unauthorizedCallback = () => {}
 
-  get = (url, params) => {
+  get = (url, params, ignorecache = false) => {
+    console.log('ignorecache', ignorecache)
     const URLparams = params || {}
+    const postfix = ignorecache ? '?timestamp='+new Date().getTime() : ''
+
     return this._send({
-      url: process.env.REACT_APP_API_URL + url,
+      url: process.env.REACT_APP_API_URL + url + postfix,
       method: 'GET',
       headers: {
-        'Authorization': this._userToken,
+        Authorization: this._userToken,
       },
       params: URLparams
     })

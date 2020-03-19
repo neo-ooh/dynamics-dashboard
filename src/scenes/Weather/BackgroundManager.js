@@ -179,8 +179,6 @@ class BackgroundManager extends Component {
       cities.push({ value: '+', label: '+ ' + this.props.intl.formatMessage(messages.weather.addCity) })
     }
 
-    console.log("selection", this.state.selection)
-
     return [
       <section className="content-column" key="background-manager">
         <Link to="/dynamic/weather/"
