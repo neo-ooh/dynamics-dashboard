@@ -1,6 +1,8 @@
 .selectable-card-list {
   display: block;
   margin-top: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
 
   .selectable-card-list-label {
     width: 100%;
