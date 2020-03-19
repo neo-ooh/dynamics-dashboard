@@ -78,6 +78,7 @@ class GenerateURL extends Component {
     { value: 'SHD', label: 'Sports HD' },
     { value: 'PHD', label: 'Pompe Media HD' },
     { value: 'PML', label: 'Pompe Media Landscape' },
+    { value: 'PMP', label: 'Pompe Media Portrait' },
   ]
 
   generateURL = () => {
