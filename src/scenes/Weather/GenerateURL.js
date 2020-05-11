@@ -61,6 +61,7 @@ class GenerateURL extends Component {
   weatherTypes = [
     { value: 'now', label: this.props.intl.formatMessage(messages.weather.contentNow) },
     { value: 'forecast', label: this.props.intl.formatMessage(messages.weather.contentForecast) },
+    { value: 'hourly', label: this.props.intl.formatMessage(messages.weather.contentHourly) },
     { value: 'national', label: this.props.intl.formatMessage(messages.weather.contentNational) },
   ]
 
@@ -95,10 +96,15 @@ class GenerateURL extends Component {
 
     if(this.state.design === 'WDE') {
       contentForDesign = this.weatherTypes.slice(0, 2)
-    } else if (this.state.design === 'PML' || this.state.design === 'PMP') {
+    } else if (this.state.design === 'PMP') {
       contentForDesign = this.weatherTypes.slice(1, 2)
+    } else if (this.state.design === 'PML') {
+      contentForDesign = this.weatherTypes.slice(1, 3)
+    } else if (this.state.design === '') {
+      contentForDesign = this.weatherTypes.slice()
     } else {
-      contentForDesign = this.weatherTypes
+      contentForDesign = this.weatherTypes.slice()
+      contentForDesign.splice(2, 1)
     }
 
     return (

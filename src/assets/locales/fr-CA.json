@@ -54,6 +54,7 @@
   "dynamics.weather.cloudy": "Nuageux",
   "dynamics.weather.content-type": "Contenu",
   "dynamics.weather.content-type.forecast": "Prévisions",
+  "dynamics.weather.content-type.hourly": "Heure par Heure",
   "dynamics.weather.content-type.national": "Nationale",
   "dynamics.weather.content-type.now": "Maintenant",
   "dynamics.weather.delete-background": "Supprimer ce fond",

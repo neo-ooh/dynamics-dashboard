@@ -26,6 +26,11 @@ export default defineMessages({
     description: 'Next days weather',
     defaultMessage: 'Forecast',
   },
+  contentHourly: {
+    id: 'dynamics.weather.content-type.hourly',
+    description: 'Next hours weather',
+    defaultMessage: 'Hourly',
+  },
   contentNational: {
     id: 'dynamics.weather.content-type.national',
     description: 'national weather',
