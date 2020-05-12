@@ -13,6 +13,7 @@
   "dynamics.login.title": "Please log in.",
   "dynamics.news.categories.en": "English categories",
   "dynamics.news.categories.fr": "French categories",
+  "dynamics.news.duration": "Duration",
   "dynamics.news.generate-url": "Generate URL",
   "dynamics.news.locale": "Locale",
   "dynamics.params.create": "Create",

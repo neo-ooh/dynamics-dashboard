@@ -9,6 +9,7 @@ import messages from 'library/messages'
 
 import { injectIntl } from 'react-intl'
 import copy from 'copy-to-clipboard'
+import TextField from 'components/TextField'
 
 class GenerateURL extends Component {
   constructor (props) {
@@ -18,6 +19,7 @@ class GenerateURL extends Component {
       availableCategories: {},
       categories: {},
       apiKey: '',
+      duration: 10,
       design: '',
       keys: []
     }
@@ -68,7 +70,11 @@ class GenerateURL extends Component {
     this.setState({ apiKey: newKey })
   }
 
-  onDesignChanges = newDesign=> {
+  onDurationChanges = newDuration => {
+    this.setState({ duration: newDuration.target.value })
+  }
+
+  onDesignChanges = newDesign => {
     this.setState({ design: newDesign })
   }
 
@@ -81,7 +87,7 @@ class GenerateURL extends Component {
   ]
 
   generateURL = () => {
-    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.design && '&design=' + this.state.design) + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.design && '&design=' + this.state.design) + '&duration=' + this.state.duration + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
@@ -109,6 +115,11 @@ class GenerateURL extends Component {
           label={ this.props.intl.formatMessage(messages.app.design) }
           items={ this.designs }
           onChange={this.onDesignChanges}/>
+        <TextField
+          label={ this.props.intl.formatMessage(messages.news.duration) + '(s)' }
+          value={ this.state.duration }
+          type="number"
+          onChange={this.onDurationChanges}/>
         <Select
           label={ this.props.intl.formatMessage(messages.weather.APIKey) }
           options={ this.state.keys }

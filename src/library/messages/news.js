@@ -20,5 +20,10 @@ export default defineMessages({
     id: 'dynamics.news.locale',
     description: 'Locale the news are displayed on',
     defaultMessage: 'Locale',
+  },
+  duration: {
+    id: 'dynamics.news.duration',
+    description: 'How long an article should be shown',
+    defaultMessage: 'Duration',
   }
 })
