@@ -6,7 +6,7 @@ class Api {
   _unauthorizedCallback = () => {}
 
   get = (url, params, ignorecache = false) => {
-    console.log('ignorecache', ignorecache)
+    // console.log('ignorecache', ignorecache)
     const URLparams = params || {}
     const postfix = ignorecache ? '?timestamp='+new Date().getTime() : ''
 
