@@ -7,7 +7,7 @@ class ToggleSwitch extends Component {
 
     this.state = {
       id: uuid(),
-      selected: this.props.selected || this.props.items[0].value
+      selected: this.props.selected || this.props.items.length > 0 ? this.props.items[0].value : null
     }
   }
 

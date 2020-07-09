@@ -11,7 +11,7 @@ class SelectableCardList extends Component {
 
     this.state = {
       id: uuid(),
-      selected: this.props.default || (this.props.multiple ? [] : this.props.items[0].value),
+      selected: this.props.default || (this.props.multiple ? [] : this.props.items.length > 0 ? this.props.items[0].value : null),
       allSelected: false,
     }
   }
