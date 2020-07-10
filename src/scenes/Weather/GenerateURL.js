@@ -37,7 +37,7 @@ class GenerateURL extends Component {
 
       this.setState({
         keys: formattedKeys,
-        apiKey: formattedKeys[0].value
+        apiKey: formattedKeys.length > 0 ? formattedKeys[0].value : ''
       })
     })
   }

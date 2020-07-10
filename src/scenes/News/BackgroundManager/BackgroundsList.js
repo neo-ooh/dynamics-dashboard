@@ -63,8 +63,6 @@ class BackgroundsList extends Component {
     return (
       <div className="background-list-container">
         { this.state.categories.map(cat => {
-
-          console.log(this.state.backgrounds)
           const filterBackgrounds = this.state.backgrounds.filter(bckg =>
             bckg.category.id === cat.id &&
             bckg.support === this.props.support &&
