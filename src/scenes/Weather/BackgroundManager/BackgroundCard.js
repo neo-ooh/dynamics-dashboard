@@ -3,8 +3,8 @@ import { injectIntl } from 'react-intl'
 import api from 'library/api'
 
 import ImageCard from 'components/Cards/ImageCard'
-import FilledBackgroundCard from './BackgroundCard/FilledBackgroundCard'
-import EmptyBackgroundCard from './BackgroundCard/EmptyBackgroundCard'
+import FilledBackgroundCard from 'components/Cards/FilledBackgroundCard'
+import EmptyBackgroundCard from 'components/Cards/EmptyBackgroundCard'
 
 class BackgroundCard extends Component {
   constructor (props) {
