@@ -8,9 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 
 //
 // LOCALIZATIONS
-import { IntlProvider, addLocaleData } from 'react-intl'
-import fr from 'react-intl/locale-data/fr'
-import en from 'react-intl/locale-data/en'
+import { IntlProvider } from 'react-intl'
 import frenchMessages from './assets/locales/fr-CA'
 import englishMessages from './assets/locales/en-CA'
 
@@ -19,19 +17,19 @@ import { config } from 'dotenv'
 config()
 
 const messages = {
-  'fr-FR': frenchMessages,
-  'en-CA': englishMessages,
+  'fr-fr': frenchMessages,
+  'en-ca': englishMessages,
 }
-
-addLocaleData([...fr, ...en])
 
 //
 // GO REACT
 
+const locale = navigator.language in messages ? navigator.language : 'en-ca'
+
 ReactDOM.render(
   <IntlProvider
     locale={ navigator.language }
-    messages={messages[navigator.language]}>
+    messages={messages[locale]}>
     <BrowserRouter>
       <App/>
     </BrowserRouter>

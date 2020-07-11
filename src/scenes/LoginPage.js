@@ -57,11 +57,13 @@ class LoginPage extends Component {
             placeholder="neo@traffic.com"
             onChange={ this.onEmailChange }
             focus
+            autocomplete="email"
             onEnter={ this.onLogin }/>
           <TextField
             type="password"
             label={ this.props.intl.formatMessage(messages.app.loginPassword) }
             placeholder="•••••"
+            autocomplete="current-password"
             onChange={ this.onPasswordChange }
             onEnter={ this.onLogin } />
           <Button

@@ -5,12 +5,16 @@ class Api {
   _errorCallback = () => {}
   _unauthorizedCallback = () => {}
 
-  get = (url, params, ignorecache = false) => {
+  _http = axios.create({
+    baseURL: process.env.REACT_APP_API_URL,
+  })
+
+  get = (url, params, ignorecache = true) => {
     const URLparams = params || {}
     const postfix = ignorecache ? '?timestamp='+new Date().getTime() : ''
 
     return this._send({
-      url: process.env.REACT_APP_API_URL + url + postfix,
+      url: url + postfix,
       method: 'GET',
       headers: {
         Authorization: this._userToken,
@@ -21,7 +25,7 @@ class Api {
 
   post = (url, data) => {
     return this._send({
-      url: process.env.REACT_APP_API_URL + url,
+      url: url,
       method: 'POST',
       headers: {
         'Authorization': this._userToken,
@@ -32,7 +36,7 @@ class Api {
 
   put = (url, data) => {
     return this._send({
-      url: process.env.REACT_APP_API_URL + url,
+      url: url,
       method: 'PUT',
       headers: {
         'Authorization': this._userToken,
@@ -43,7 +47,7 @@ class Api {
 
   delete = (url, params) => {
     return this._send({
-      url: process.env.REACT_APP_API_URL + url,
+      url: url,
       method: 'DELETE',
       headers: {
         'Authorization': this._userToken,
@@ -53,7 +57,7 @@ class Api {
   }
 
   _send = (options) => {
-    return axios(options).then(this._postReceive).catch(this._onError)
+    return this._http(options).then(this._postReceive).catch(this._onError)
   }
 
   /**

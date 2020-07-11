@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { injectIntl } from 'react-intl'
 import messages from 'library/messages'
 import Vhr from 'components/Vhr'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 import Card from 'components/Card'
 
 class SelectableCardList extends Component {

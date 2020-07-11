@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";

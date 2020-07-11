@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import uuid from 'uuid/v4'
+import { v4 as uuid } from 'uuid'
 
 class TextField extends Component {
   componentDidMount() {
