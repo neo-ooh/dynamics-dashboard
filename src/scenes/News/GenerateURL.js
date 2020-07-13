@@ -21,6 +21,7 @@ class GenerateURL extends Component {
       apiKey: '',
       duration: 10,
       design: '',
+      network: 'shopping',
       keys: []
     }
   }
@@ -78,6 +79,10 @@ class GenerateURL extends Component {
     this.setState({ design: newDesign })
   }
 
+  onNetworkChanges = newNetwork => {
+    this.setState({ network: newNetwork })
+  }
+
   designs = [
     { value: '', label: this.props.intl.formatMessage(messages.weather.autoLanguage) },
     { value: 'DCA', label: 'DCA' },
@@ -86,8 +91,14 @@ class GenerateURL extends Component {
     { value: 'PMP', label: 'Pompe Media Portrait' },
   ]
 
+  networks = [
+    { value: 'shopping', label: 'Shopping' },
+    { value: 'fitness', label: 'Fitness' },
+    { value: 'onthego', label: 'On the go' },
+  ]
+
   generateURL = () => {
-    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.design && '&design=' + this.state.design) + '&duration=' + this.state.duration + '&key=' + this.state.apiKey
+    return process.env.REACT_APP_NEWS_URL + '/?categories=' + [].concat(...Object.values(this.state.categories)).join(',') + (this.state.design && '&design=' + this.state.design) + '&duration=' + this.state.duration + '&network=' + this.state.network + '&key=' + this.state.apiKey
   }
 
   copyURL = () => {
@@ -102,6 +113,10 @@ class GenerateURL extends Component {
           News Dynamic
         </Link>
         <h1>{ this.props.intl.formatMessage(messages.news.generateURL) }</h1>
+        <Select
+          label={ this.props.intl.formatMessage(messages.app.network) }
+          options={ this.networks }
+          onChange={this.onNetworkChanges}/>
         { Object.entries(this.state.availableCategories).map(([lang, categories]) => (
           <SelectableCardList
             label={ this.props.intl.formatMessage(messages.news['categories_' + lang]) }

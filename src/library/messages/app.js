@@ -112,5 +112,10 @@ export default defineMessages({
     id: 'dynamics.design',
     description: 'Just the name design referring to a screen design',
     defaultMessage: 'Design',
+  },
+  network: {
+    id: 'dynamics.network',
+    description: 'Just the name network referring to a broadcasting network',
+    defaultMessage: 'Network',
   }
 })

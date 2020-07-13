@@ -5,6 +5,8 @@
   "dynamics.provinces.alberta",
   "dynamics.provinces.british-columbia",
   "dynamics.dynamics.dynamics",
+  "dynamics.design",
+  "dynamics.news.duration",
   "dynamics.weather.language.auto",
   "dynamics.weather.province",
   "dynamics.weather.support",

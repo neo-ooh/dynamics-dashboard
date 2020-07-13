@@ -16,7 +16,6 @@
     "react-dropzone": "^11.0.1",
     "react-intl": "^5.0.2",
     "react-intl-po": "^2.2.2",
-    "react-intl-translations-manager": "^5.0.3",
     "react-intl.macro": "*",
     "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
@@ -28,9 +27,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "extract-messages": "NODE_ENV=production babel ./src  --out-file /dev/null && rip json2pot './messages/src/**/*.json' -o ./translation/en-ca.pot",
     "compile-translations": "rip po2json './translation/*.po' -m './messages/src/**/*.json' -o './src/assets/locales'",
-    "extract:messages": "react-intl-cra 'src/**/*.{js,jsx}' -o './messages/messages.json' && node ./translationRunner.js",
+    "extract:messages": "MESSAGE_DIR='./messages' react-scripts build && node ./translationRunner.js",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -90,5 +88,8 @@
       "jsx",
       "node"
     ]
+  },
+  "devDependencies": {
+    "react-intl-translations-manager": "^5.0.3"
   }
 }
