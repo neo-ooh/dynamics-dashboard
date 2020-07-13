@@ -19,6 +19,7 @@ class BackgroundManager extends Component {
 
   supports = [
     { value: 'DCA', label: 'DCA' },
+    { value: 'DCF', label: 'DCA - Fitness' },
     { value: 'FCL', label: 'FCL' },
   ]
 
