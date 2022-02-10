@@ -7,7 +7,7 @@
     "babel-plugin-react-intl": "^7.5.28",
     "browserslist": "^4.13.0",
     "copy-to-clipboard": "^3.3.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-app-polyfill": "^1.0.6",
     "react-cookie": "^4.0.3",
